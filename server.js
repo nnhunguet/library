@@ -41,10 +41,11 @@ app.get('/books/update/:id', function(req, res){
 
 app.get('/updateTitle/:id', function(req, res) {
   var id = parseInt(req.params.id);
-  var input = document.getElementById('updateTitle');
+  console.log(req.body);
+  var input = req.body;
   db.get('books')
     .find({id: id})
-    .assign({title: input});
+    .assign({title: input}).write();
   res.redirect('/books')
 })
 
