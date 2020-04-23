@@ -31,7 +31,7 @@ app.get('/books/delete/:id', function(req, res){
 
 app.get('/books/update/:id', function(req, res){
   var id = parseInt(req.params.id);
-  db.get('books')
+  db.get('books').find({id: id}).get('update.')
 })
 
 // listen for requests :)

@@ -3,5 +3,5 @@ ul
   for book in books
     li
       span=book.title
-      a(href="/books/update") Update
+      a(href="/books/update"+book.id) Update
       a(href="/books/delete/"+book.id) Delete
