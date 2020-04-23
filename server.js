@@ -21,6 +21,10 @@ app.get('/books', function(req, res){
   res.render('books', {
     books: books
   })
+});
+
+app.get('/books/update/:id', function(req, res){
+  var id = parseInt(req.params.id)
 })
 
 // listen for requests :)

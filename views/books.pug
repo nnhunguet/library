@@ -1,1 +1,7 @@
 h1 Hello
+ul
+  for book in books
+    li
+      span=book.title
+      a(href="/books/update") Update
+      a(href="/books/delete") Delete
