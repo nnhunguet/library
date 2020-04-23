@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 // our default array of dreams
 app.get('/books', function(req, res){
   var books = db.get('books').value();
-  res.render('/books', {
+  res.render('books', {
     books: books
   })
 })
