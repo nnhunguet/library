@@ -31,8 +31,13 @@ app.get('/books/delete/:id', function(req, res){
 
 app.get('/books/update/:id', function(req, res){
   var id = parseInt(req.params.id);
-  db.get('books').find({id: id}).get('update.')
-})
+  var input = req.query.q;
+  db.get('books')
+    .find({id: id})
+    .assign({title: input});
+  res.redirect('/books')
+});
+
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
