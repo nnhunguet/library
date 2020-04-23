@@ -5,7 +5,7 @@
 // but feel free to use whatever libraries or frameworks you'd like through `package.json`.
 const express = require("express");
 const app = express();
-var db = require('./db');
+var db = require('./db.js');
 
 app.set('view engine', 'pug')
 
@@ -17,8 +17,8 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 
 // our default array of dreams
 app.get('/books', function(req, res){
-  var books = db.get
-  res.render('./books', {
+  var books = db.get('books').value();
+  res.render('/books', {
     books: books
   })
 })

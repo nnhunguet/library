@@ -1,12 +1,12 @@
 {
   "books": [
     {
-      "title": 'The Wolrd Flat',
-      "description": 'Thế giới phẳng'
-    }, 
+      "title": "The Wolrd Flat",
+      "description": "Thế giới phẳng"
+    },
     {
-      "title": 'Đắc nhân tâm',
-      "description": 'Chưa đọc'
+      "title": "Đắc nhân tâm",
+      "description": "Chưa đọc"
     }
   ]
 }
