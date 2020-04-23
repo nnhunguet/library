@@ -31,12 +31,21 @@ app.get('/books/delete/:id', function(req, res){
 
 app.get('/books/update/:id', function(req, res){
   var id = parseInt(req.params.id);
-  var input = req.query.q;
-  db.get('books')
-    .find({id: id})
-    .assign({title: input});
-  res.redirect('/books')
+  var book = db.get('books').find({id: id}).value();
+  res.render('update', {
+    book: book
+  });
+  // var input = req.query.q;
+  // db.get('books')
+  //   .find({id: id})
+  //   .assign({title: input});
+  // res.redirect('/books')
 });
+
+app.get('/books/updateTitle/:id', function(req, res) {
+  var input = req.params.
+})
+
 
 
 // listen for requests :)

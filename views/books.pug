@@ -1,5 +1,5 @@
 h1 Hello
-form(method="GET" action="/todos/update/"+book.id)
+form(method="GET" action="/todos/update/")
   label(for="title") Title Book: 
   input(type="text" name="q" id="title")
   button(type="submit") Search
@@ -7,5 +7,5 @@ ul
   for book in books
     li
       span=book.title
-      a(href="/books/update"+book.id) Update
+      a(href="/books/update/"+book.id) Update
       a(href="/books/delete/"+book.id) Delete
