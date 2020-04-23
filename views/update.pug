@@ -1,6 +1,6 @@
 h1 Update
-form(method="GET" action="/updateTitle/"+book.id)
+form(method="POST" action="/updateTitle/"+book.id)
   label(for="update") 
     span(id="updateTitle")=book.title
-  input(type="text" name="q" id="update") 
+  input(type="text" name="title" id="update") 
   button(type="submit") Update
