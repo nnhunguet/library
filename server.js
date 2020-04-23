@@ -36,14 +36,16 @@ app.get('/books/update/:id', function(req, res){
     book: book
   });
   // var input = req.query.q;
-  // db.get('books')
-  //   .find({id: id})
-  //   .assign({title: input});
-  // res.redirect('/books')
+  
 });
 
-app.get('/books/updateTitle/:id', function(req, res) {
-  var input = req.params.
+app.get('/updateTitle/:id', function(req, res) {
+  var id = parseInt(req.params.id);
+  var input = document.getElementById('updateTitle');
+  db.get('books')
+    .find({id: id})
+    .assign({title: input});
+  res.redirect('/books')
 })
 
 
