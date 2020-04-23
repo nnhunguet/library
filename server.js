@@ -23,8 +23,15 @@ app.get('/books', function(req, res){
   })
 });
 
+app.get('/books/delete/:id', function(req, res){
+  var id = parseInt(req.params.id);
+  db.get('books').remove({id: id}).write();
+  res.redirect('/books');
+})
+
 app.get('/books/update/:id', function(req, res){
-  var id = parseInt(req.params.id)
+  var id = parseInt(req.params.id);
+  db.get('books')
 })
 
 // listen for requests :)
