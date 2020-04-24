@@ -16,40 +16,7 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 
 
 // our default array of dreams
-app.get('/books', function(req, res){
-  var books = db.get('books').value();
-  res.render('books', {
-    books: books
-  })
-});
 
-app.get('/books/delete/:id', function(req, res){
-  var id = parseInt(req.params.id);
-  db.get('books').remove({id: id}).write();
-  res.redirect('/books');
-})
-
-app.get('/books/update/:id', function(req, res){
-  var id = parseInt(req.params.id);
-  var book = db.get('books').find({id: id}).value();
-  res.render('update', {
-    book: book
-  });
-  // var input = req.query.q;
-  
-});
-
-app.post('/updateTitle/:id', function(req, res) {
-  var id = parseInt(req.params.id);
-  console.log(req.body);
-  var input = req.body.title;
-  console.log(input);
-  db.get('books')
-    .find({id: id})
-    .assign({title: input}).write();
-  console.log(db.get('books').value());
-  res.redirect('/books');
-})
 
 
 
