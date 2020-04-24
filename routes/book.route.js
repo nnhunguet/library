@@ -1,7 +1,8 @@
-var express = require('express')
-var router = express.Router()
+var express = require('express');
+var router = express.Router();
 
 var db = require('../db.js');
+var shortid = require('shortid');
 
 router.get('/', function(req, res){
   var books = db.get('books').value();
@@ -47,6 +48,11 @@ router.post('/updateTitle/:id', function(req, res) {
     .assign({title: input}).write();
   console.log(db.get('books').value());
   res.redirect('/books');
+});
+
+router.post('/create', function(req, res) {
+  var id = shortid.generator();
+  
 })
 
 module.exports = router;
