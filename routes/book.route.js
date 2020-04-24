@@ -5,7 +5,7 @@ var db = require('../db.js');
 
 router.get('/', function(req, res){
   var books = db.get('books').value();
-  res.render('books', {
+  res.render('book/index', {
     books: books
   })
 });
@@ -16,7 +16,7 @@ router.get('/search', function(req, res) {
   var searchBooks = db.get('books').value().filter(function(book) {
     return book.title.toLowerCase().indexOf(q.toLowerCase()) !== -1;
   }); 
-  res.render('books', {
+  res.render('book/index', {
     books: searchBooks
   })
 })
@@ -30,7 +30,7 @@ router.get('/delete/:id', function(req, res){
 router.get('/update/:id', function(req, res){
   var id = parseInt(req.params.id);
   var book = db.get('books').find({id: id}).value();
-  res.render('update', {
+  res.render('book/update', {
     book: book
   });
   // var input = req.query.q;
@@ -46,7 +46,7 @@ router.post('/updateTitle/:id', function(req, res) {
     .find({id: id})
     .assign({title: input}).write();
   console.log(db.get('books').value());
-  res.redirect('/');
+  res.redirect('/books');
 })
 
 module.exports = router;
