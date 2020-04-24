@@ -4,7 +4,17 @@ var router = express.Router();
 var db = require('../db');
 
 router.get('/', function(req, res) {
-  res.render('user/index')
+  res.render('user/index');
+});
+
+router.get('/login', function(req, res) {
+  res.render('user/login');
+});
+
+router.post('/login', function(req, res) {
+  var email = req.body.email;
+  var password = rep.body.password;
+  var user = db.get('users').find( {} )
 })
 
 router.get('/create', function(req, res) {
@@ -19,7 +29,7 @@ router.post('/create', function(req, res) {
     password: password
   };
   db.get('users').push(newUser).write();
-  res.redirect('/index')
+  res.redirect('/user/login')
 })
 
 module.exports = router
