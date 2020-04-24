@@ -1,7 +1,7 @@
 var express = require('express')
 var router = express.Router()
 
-var d
+var db = require('../db.js');
 
 router.get('/', function(req, res){
   var books = db.get('books').value();
@@ -9,6 +9,15 @@ router.get('/', function(req, res){
     books: books
   })
 });
+
+router.get('/search', function(req, res) {
+  var searchBooks = db.get('books').value().map(function(book) {
+    return book.title
+  }); 
+  res.render('books', {
+    book: searchBooks
+  })
+})
 
 router.get('/delete/:id', function(req, res){
   var id = parseInt(req.params.id);
