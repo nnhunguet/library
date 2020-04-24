@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 
 // our default array of dreams
 
-app.use('/books', bookRoute);
+app.use('/book', bookRoute);
 app.use('/user', userRoute);
 
 // listen for requests :)

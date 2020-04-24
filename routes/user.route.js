@@ -13,7 +13,7 @@ router.post('/create', function(req, res) {
     password: password
   };
   db.get('users').push(newUser).write();
-  res.redirect('/books')
+  res.redirect('/book')
 })
 
 module.exports = router

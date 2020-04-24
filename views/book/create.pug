@@ -1,0 +1,10 @@
+extends ../layout/common.pug
+block content
+  form(action="/book/create" method="POST")
+  .form-group
+    label(for='title') Title
+    input#email.form-control(type='text' name='title')
+  .form-group
+    label(for='desc') Description
+    input#password.form-control(type='text-area' name='desc')
+  button.btn.btn-primary(type='submit') Create
