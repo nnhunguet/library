@@ -1,10 +1,13 @@
 extends ../layout/common.pug
 block content
   
-  form(method="GET" action="/books/search")
+  form(method="GET" action="/book/search")
     label(for="title") Title Book: 
-    input(type="text" name="q" id="title")
-    button(type="submit") Search
+    .form-group
+      input.form-control(type="text" name="q" id="title")
+      button(type="submit") Search
+  form(method="GET" action="/book/create") 
+    button(type="submit") Create Book
   ul
     for book in books
       li
