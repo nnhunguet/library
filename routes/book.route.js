@@ -11,11 +11,13 @@ router.get('/', function(req, res){
 });
 
 router.get('/search', function(req, res) {
-  var searchBooks = db.get('books').value().map(function(book) {
-    return book.title
+  var q = req.query.q;
+  console.log(q);
+  var searchBooks = db.get('books').value().filter(function(book) {
+    return book.title.toLowerCase().indexOf(q.toLowerCase()) !== -1;
   }); 
   res.render('books', {
-    book: searchBooks
+    books: searchBooks
   })
 })
 
