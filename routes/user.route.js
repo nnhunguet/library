@@ -13,8 +13,17 @@ router.get('/login', function(req, res) {
 
 router.post('/login', function(req, res) {
   var email = req.body.email;
-  var password = rep.body.password;
-  var user = db.get('users').find( {} )
+  var password = req.body.password;
+  var user = db.get('users').find( {email: email} ).vlaue();
+  var errors = [];
+  if(!user) { 
+    errors.push('User not exit');
+    res.redirect('')
+  } else {
+    if(password !== user.password) {
+      errors.push('Wrong password');
+    }
+  } 
 })
 
 router.get('/create', function(req, res) {
