@@ -55,7 +55,14 @@ router.get('/create', function(req, res) {
 })
 
 router.post('/create', function(req, res) {
-  var title = req.
+  var title = req.body.title;
+  var desc = req.body.desc;
+  var newBook = {
+    title: title,
+    description: desc 
+  };
+  db.get('books').push(newBook).write();
+  res.redirect('/book');
 });
 
 module.exports = router;
