@@ -51,11 +51,11 @@ router.post('/updateTitle/:id', function(req, res) {
 });
 
 router.get('/create', function(req, res) {
-  res.render('/book/create')
+  res.render('book/create')
 })
 
 router.post('/create', function(req, res) {
-  
+  var title = req.
 });
 
 module.exports = router;
