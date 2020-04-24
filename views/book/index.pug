@@ -1,11 +1,13 @@
-h1 Hello
-form(method="GET" action="/books/search")
-  label(for="title") Title Book: 
-  input(type="text" name="q" id="title")
-  button(type="submit") Search
-ul
-  for book in books
-    li
-      span=book.title
-      a(href="/books/update/"+book.id) Update
-      a(href="/books/delete/"+book.id) Delete
+extends ../layout/common.pug
+block content
+  
+  form(method="GET" action="/books/search")
+    label(for="title") Title Book: 
+    input(type="text" name="q" id="title")
+    button(type="submit") Search
+  ul
+    for book in books
+      li
+        span=book.title
+        a(href="/books/update/"+book.id) Update
+        a(href="/books/delete/"+book.id) Delete

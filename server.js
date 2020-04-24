@@ -10,7 +10,8 @@ var db = require('./db.js');
 app.set('view engine', 'pug')
 
 
-var bookRoute = require('./routes/book.route')
+var bookRoute = require('./routes/book.route');
+var userRoute = require('./routes/user.route');
 
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
@@ -19,7 +20,7 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 // our default array of dreams
 
 app.use('/books', bookRoute);
-
+app.use('/user', userRoute);
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
