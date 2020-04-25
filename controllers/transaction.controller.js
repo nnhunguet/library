@@ -40,5 +40,5 @@ module.exports.postCreate = function(req, res) {
 
 
 module.exports.complete = function(req, res) {
-  
+  res.send('Hello');
 }
