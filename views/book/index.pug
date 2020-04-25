@@ -14,5 +14,7 @@ block content
     for book in books
       li
         span=book.title
-        a(href="/books/update/"+book.id) Update
-        a(href="/books/delete/"+book.id) Delete
+        a(href='/book/view/'+book.id) 
+          .btn.btn-infor=
+        a(href="/book/update/"+book.id) Update
+        a(href="/book/delete/"+book.id) Delete
