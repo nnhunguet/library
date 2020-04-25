@@ -4,57 +4,17 @@ var router = express.Router();
 var db = require('../db');
 var shortid = require('shortid');
 
-var controller = require('../controllers/user.controller')
+var controller = require('../controllers/user.controller');
 
 router.get('/', controller.index);
 
-router.get('/login', function(req, res) {
-  res.render('user/login');
-});
+router.get('/login', controller.login);
 
-router.post('/login', function(req, res) {
-  var email = req.body.email;
-  var password = req.body.password;
-  var user = db.get('users').find( {email: email} ).value();
-  var errors = [];
-  if(!user) { 
-    res.render('user/login', {
-      errors: [
-        'User not exit'
-      ]
-    })
-    return;
-  }
-  
-  if(password !== user.password) {
-    res.render('user/login', {
-      errors: [
-        'Wrong PassWord'
-      ]
-    });
-    return;
-  }
-  
-  res.redirect('/user/'+user.id);
-})
+router.post('/login', controller.postLogin);
 
-router.get('/create', function(req, res) {
-  res.render('user/create')
-});
+router.get('/create', );
 
-router.post('/create', function(req, res) {
-  var email = req.body.email;
-  var password = req.body.password;
-  var id = shortid.generate();
-  var newUser = {
-    id: id,
-    email: email,
-    password: password
-  };
-  db.get('users').push(newUser).write();
-  console.log(db.get('users').value());
-  res.redirect('/user/login');
-})
+router.post('/create', )
 
 router.get('/:id', function(req, res) {
   var id = req.params.id;
