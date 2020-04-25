@@ -1,6 +1,7 @@
 extends ../layout/common.pug
 block content
-  
+  h1.display-4.text-center Library
+  p.text-center.font-weight-light Coders-Tokyo
   form(method="GET" action="/book/search").form-inline
     .form-group.mr-2
       input.form-control(type="text" name="q" id='title' placeholder='Search Book' value=value ? value : '')

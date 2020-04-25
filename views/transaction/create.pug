@@ -1,5 +1,7 @@
 extend ../layout/common.pug
 block content
+  h1.display-4.text-center Create Transaction
+  p.text-center.font-weight-light Coders-Tokyo
   form(action='/transaction/create' method="POST")
     table.table
       tr
@@ -13,5 +15,4 @@ block content
             option(selected='' ) Select Book
             each book in books 
               option(value=book.id)=book.title
-    input(type='text' name='test')
-    button(type='submit').btn.btn-dark Submit
+    button(type='submit').btn.btn-outline-danger.btn-block Submit
