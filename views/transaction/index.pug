@@ -4,14 +4,15 @@ block content
   if showTransactions
     table.table.table-hover
       tr 
-        th ID
         th User
         th Book
+        td 
       each showTransaction in showTransactions
         tr
-          td=showTransaction.id
           td=showTransaction.user
           td=showTransaction.book
+          td 
+            a(href='/transactions/'+ showTransaction.id +'/complete') Finish
   hr
   a(href='/transaction/create').text-decoration-none
     .btn.btn-outline-danger.btn-block Create

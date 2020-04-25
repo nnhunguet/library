@@ -37,3 +37,8 @@ module.exports.postCreate = function(req, res) {
   console.log(db.get('transactions').value());
   res.redirect('/');
 }
+
+
+module.exports.complete = function(req, res) {
+  
+}
