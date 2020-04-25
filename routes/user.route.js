@@ -57,9 +57,11 @@ router.post('/create', function(req, res) {
 })
 
 router.get('/:id', function(req, res) {
-  var user = db.get('user').find( {id: req.params.id}).value();
-  console.log(user);
-  res.render('methodBook/index');
+  var id = req.params.id;
+  var user = db.get('users').find( {id: parseInt(id)}).value();
+  res.render('methodBook/index', {
+    user: user
+  });
 })
 
 module.exports = router
