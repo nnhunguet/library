@@ -1,7 +1,11 @@
-h1 Hello Coders-X
-a(href='https://spotted-flawless-grain.glitch.me/book') 
-  p Book
-a(href='https://spotted-flawless-grain.glitch.me/user') 
-  p User
-a(href='https://spotted-flawless-grain.glitch.me/transaction') 
-  p Transaction
+extend ./layout/common
+block content
+  h1 Hello Coders-X
+  a(href='https://spotted-flawless-grain.glitch.me/book').text-decoration-none 
+    button.btn.btn-outline-dark.btn-block Book
+  hr
+  a(href='https://spotted-flawless-grain.glitch.me/user') 
+    button.btn.btn-outline-success.btn-block User
+  hr
+  a(href='https://spotted-flawless-grain.glitch.me/transaction') 
+    button.btn.btn-outline-info.btn-block Transaction
