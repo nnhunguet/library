@@ -73,8 +73,8 @@ router.get('/borrow/:id', function(req, res) {
 });
 
 router.get('/borrowed/:id', function(req, res) {
-  var id = req.params.id;
-  var idUser 
+  var idUser = req.params.id;
+  
 })
 
 module.exports = router

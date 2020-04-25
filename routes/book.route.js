@@ -4,12 +4,7 @@ var router = express.Router();
 var db = require('../db.js');
 var shortid = require('shortid');
 
-router.get('/', function(req, res){
-  var books = db.get('books').value();
-  res.render('book/index', {
-    books: books
-  })
-});
+router.get('/', );
 
 router.get('/search', function(req, res) {
   var q = req.query.q;
