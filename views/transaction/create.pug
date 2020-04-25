@@ -4,15 +4,14 @@ block content
     table.table
       tr
         td
-          select.custom-select
+          select(name='user').custom-select
             option(selected='' ) Select User
             each user in users
-              option
-                span(value=user.id)=user.email
+              option(value=user.id)=user.email
         td
-          select.custom-select
+          select(name='book').custom-select
             option(selected='' ) Select Book
             each book in books 
-              option
-                span(value=book.id)=book.title
+              option(value=book.id)=book.title
+    input(type='text' name='test')
     button(type='submit').btn.btn-dark Submit

@@ -18,5 +18,11 @@
       "password": "12345"
     }
   ],
-  "transaction": []
+  "transactions": [
+    {
+      "id": "6LCFsFakN",
+      "idUser": "3v7zys7na",
+      "idBook": "w_MjGgDJY"
+    }
+  ]
 }

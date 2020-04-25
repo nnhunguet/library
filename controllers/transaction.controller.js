@@ -15,6 +15,13 @@ module.exports.create = function(req, res) {
 }
 
 module.exports.postCreate = function(req, res) {
-  console.log(req.body)
+  var newTransaction = {
+    id: shortid.generate(),
+    userId: req.body.user,
+    bookId: req.body.book
+  };
+  
+  db.get('transactions').push(newTransaction).write();
+  console.log(db.get('transactions').value());
   res.redirect('/');
 }
