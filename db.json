@@ -1,6 +1,27 @@
 {
   "books": [
+    {
+      "id": "it35ytnLv",
+      "title": "Thế Giới Phẳng",
+      "description": "The World Flat"
+    },
+    {
+      "id": "w_MjGgDJY",
+      "title": "Đắc Nhân Tâm",
+      "description": "Sách hay lắm nhưng chưa đọc :))"
+    },
+    {
+      "id": "syJaBQVur",
+      "title": "Nhà Giả Kim",
+      "description": "Sách viết về hành trình của nhà giả kim"
+    }
   ],
-  "users": [],
+  "users": [
+    {
+      "id": "3v7zys7na",
+      "email": "nnhungjs@gmail.com",
+      "password": "12345"
+    }
+  ],
   "transaction": []
 }
