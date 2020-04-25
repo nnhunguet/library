@@ -23,5 +23,21 @@
       "password": "12345"
     }
   ],
-  "transactions": []
+  "transactions": [
+    {
+      "id": "2N3VWJKOw",
+      "userId": "gEebdYH-k",
+      "bookId": "cCCL6sYxA"
+    },
+    {
+      "id": "HzsA4gYQP",
+      "userId": "gEebdYH-k",
+      "bookId": "cCCL6sYxA"
+    },
+    {
+      "id": "Kq5BXwUk2",
+      "userId": "gEebdYH-k",
+      "bookId": "YZK6tOGcm"
+    }
+  ]
 }

@@ -1,16 +1,17 @@
 extend ../layout/common.pug
 block content
   h1.display-4.text-center  All Transaction
-  table.table
-    tr 
-      th ID
-      th User
-      th Book
-    each showTransaction in showTransactions
-      tr
-        td=showTransaction.id
-        td=showTransaction.user
-        td=showTransaction.book
+  if showTransactions
+    table.table.table-hover
+      tr 
+        th ID
+        th User
+        th Book
+      each showTransaction in showTransactions
+        tr
+          td=showTransaction.id
+          td=showTransaction.user
+          td=showTransaction.book
   hr
   a(href='/transaction/create').text-decoration-none
     .btn.btn-outline-danger.btn-block Create
