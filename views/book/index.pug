@@ -10,11 +10,20 @@ block content
     .form-group
       label(for="create") Create Book : 
     button(type="submit") Create Book
-  ul
-    for book in books
-      li
-        span=book.title
-        a(href='/book/view/'+book.id) 
-          .btn.btn-infor=
-        a(href="/book/update/"+book.id) Update
-        a(href="/book/delete/"+book.id) Delete
+  table.table.table-dark
+      tr
+        td 
+          b Title
+        td 
+          b Tools
+      each book in books
+        tr
+          td
+            span=book.title
+          td
+            a(href='/book/view/'+book.id) 
+              button.btn.btn-light(type='button') View
+            a(href="/book/update/"+book.id) 
+              button.btn.btn-light(type='button') Update
+            a(href="/book/delete/"+book.id) 
+              button.btn.btn-light(type='button') Delete
