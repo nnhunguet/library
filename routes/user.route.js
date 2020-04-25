@@ -62,6 +62,12 @@ router.get('/:id', function(req, res) {
   res.render('methodBook/index', {
     user: user
   });
+});
+
+router.get('/borrow/:id', function(req, res) {
+  res.render('book/user/borrow', {
+    books: db.get('books').value()
+  })
 })
 
 module.exports = router
