@@ -1,36 +1,6 @@
 {
   "books": [
-    {
-      "id": "wq7CHViNa",
-      "title": "Đắc Nhân Tâm",
-      "description": "Sách hay lắm nhưng chưa đọc :))"
-    },
-    {
-      "id": "F62PTu8sP",
-      "title": "Nhà Giả Kim",
-      "description": "Cuốn này cũng hay nghe giang hồ đồn thế :)))"
-    },
-    {
-      "id": "ORaUA-6KC",
-      "title": "Thế Giới Phẳng",
-      "description": "The World Flat"
-    }
   ],
-  "users": [
-    {
-      "id": 1,
-      "email": "nnhungjs@123",
-      "password": "123456"
-    },
-    {
-      "id": "iqcsaR7tB",
-      "email": "nnhungjs@gmail.com",
-      "password": "12345"
-    },
-    {
-      "id": "dV9PxUlEh",
-      "email": "nnhungjs@gmail.com",
-      "password": "12345"
-    }
-  ]
+  "users": [],
+  "transaction": []
 }

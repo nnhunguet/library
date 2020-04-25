@@ -65,14 +65,16 @@ router.get('/:id', function(req, res) {
 });
 
 router.get('/borrow/:id', function(req, res) {
+  var idUser = req.params.id;
   res.render('methodBook/borrow', {
-    books: db.get('books').value()
+    books: db.get('books').value(),
+    idUser: idUser
   })
 });
 
 router.get('/borrowed/:id', function(req, res) {
   var id = req.params.id;
-  
+  var idUser 
 })
 
 module.exports = router
