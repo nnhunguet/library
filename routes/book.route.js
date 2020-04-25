@@ -57,11 +57,14 @@ router.get('/create', function(req, res) {
 router.post('/create', function(req, res) {
   var title = req.body.title;
   var desc = req.body.desc;
+  var id = db.get('books').value().length + 1;
   var newBook = {
+    id: id,
     title: title,
     description: desc 
   };
   db.get('books').push(newBook).write();
+  console.log(db.get('books').value())
   res.redirect('/book');
 });
 

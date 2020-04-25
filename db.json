@@ -2,34 +2,24 @@
   "books": [
     {
       "id": 1,
-      "description": "Thế giới phẳng",
-      "title": "The World Flat"
+      "title": "Thế Giới Phẳng",
+      "description": "The Flat Book"
     },
     {
       "id": 2,
       "title": "Đắc Nhân Tâm",
-      "description": "Chưa đọc"
+      "description": "Truyện tâm lí"
     },
     {
+      "id": 3,
       "title": "Nhà Giả Kim",
-      "description": "Sách viết về hành trình của nhà giả kim"
+      "description": "Sách "
     }
   ],
   "users": [
-    {},
-    {},
-    {},
     {
-      "email": "nnhungjs@gmail.com",
-      "password": "12345"
-    },
-    {
-      "email": "nghiahunguet@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": 5,
-      "email": "tranlananh131@gmail.com",
+      "id": 1,
+      "email": "nnhungjs@123",
       "password": "123456"
     }
   ]

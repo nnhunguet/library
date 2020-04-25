@@ -35,7 +35,7 @@ router.post('/login', function(req, res) {
     return;
   }
   
-  res.redirect('/'+user.id);
+  res.redirect('/user/'+user.id);
 })
 
 router.get('/create', function(req, res) {
@@ -45,7 +45,7 @@ router.get('/create', function(req, res) {
 router.post('/create', function(req, res) {
   var email = req.body.email;
   var password = req.body.password;
-  var id = db.get('users').value().length;
+  var id = db.get('users').value().length+1;
   var newUser = {
     id: id,
     email: email,
@@ -54,6 +54,12 @@ router.post('/create', function(req, res) {
   db.get('users').push(newUser).write();
   console.log(db.get('users').value());
   res.redirect('/user/login');
+})
+
+router.get('/:id', function(req, res) {
+  var user = db.get('user').find( {id: req.params.id}).value();
+  console.log(user);
+  res.render('methodBook/index');
 })
 
 module.exports = router
