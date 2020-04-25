@@ -1,5 +1,5 @@
 var db = require('../db');
-var shorid = require('shortid');
+var shortid = require('shortid');
 
 module.exports.index = function(req, res) {
   res.render('user/index');

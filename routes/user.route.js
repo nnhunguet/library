@@ -12,9 +12,9 @@ router.get('/login', controller.login);
 
 router.post('/login', controller.postLogin);
 
-router.get('/create', );
+router.get('/create', controller.create);
 
-router.post('/create', )
+router.post('/create', controller.postCreate)
 
 router.get('/:id', function(req, res) {
   var id = req.params.id;
