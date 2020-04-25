@@ -13,11 +13,9 @@
     {
       "title": "Nhà Giả Kim",
       "description": "Sách viết về hành trình của nhà giả kim"
-    },
-    {
-      "title": "Nhà Giả Kim",
-      "description": "Sách viết về hành trình của nhà giả kim"
     }
   ],
-  "users": []
+  "users": [
+    {}
+  ]
 }
