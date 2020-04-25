@@ -14,7 +14,7 @@ router.get('/login', function(req, res) {
 router.post('/login', function(req, res) {
   var email = req.body.email;
   var password = req.body.password;
-  var user = db.get('users').find( {email: email} ).vlaue();
+  var user = db.get('users').find( {email: email} ).value();
   var errors = [];
   if(!user) { 
     errors.push('User not exit');
@@ -23,7 +23,15 @@ router.post('/login', function(req, res) {
     if(password !== user.password) {
       errors.push('Wrong password');
     }
-  } 
+  }
+  
+  if(errors.length > 0) {
+    res.redirect('/', {
+      errors: errors
+    })
+  } else {
+    res.render('methodBook/index');
+  }
 })
 
 router.get('/create', function(req, res) {
