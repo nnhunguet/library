@@ -2,7 +2,7 @@ extend ../layout/common.pug
 block content
   h1.display-4.text-center  All Transaction
   table 
-    each show in transactions
+    each showTransaction in showTransactions
       tr
   hr
   a(href='/transaction/create').text-decoration-none

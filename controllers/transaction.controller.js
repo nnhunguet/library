@@ -3,6 +3,7 @@ var shortid = require('shortid');
 
 module.exports.index = function(req, res) {
   const transactions = db.get('transactions').value();
+  console.log(transactions);
   let showTransactions = transactions.map(function(transaction) {
     let changeTransaction = {
       id: transaction.id,

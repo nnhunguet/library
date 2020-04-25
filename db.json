@@ -1,28 +1,5 @@
 {
-  "books": [
-    {
-      "id": "w_MjGgDJY",
-      "title": "Đắc Nhân Tâm",
-      "description": "Sách hay lắm nhưng chưa đọc :))"
-    },
-    {
-      "id": "syJaBQVur",
-      "title": "Nhà Giả Kim",
-      "description": "Sách viết về hành trình của nhà giả kim"
-    }
-  ],
-  "users": [
-    {
-      "id": "3v7zys7na",
-      "email": "nnhungjs@gmail.com",
-      "password": "12345"
-    }
-  ],
-  "transactions": [
-    {
-      "id": "6LCFsFakN",
-      "idUser": "3v7zys7na",
-      "idBook": "w_MjGgDJY"
-    }
-  ]
+  "books": [],
+  "users": [],
+  "transactions": []
 }
