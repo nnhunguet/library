@@ -3,14 +3,9 @@ block content
   
   form(method="GET" action="/book/search").form-inline
     .form-group.mr-2
-      label(for="title") 
-      input.form-control(type="text" name="q" id="title" value=value ? value : '')
-    button(type="submit").btn.btn-primary Search
-  form(method="GET" action="/book/create") 
-    .form-group
-      label(for="create") Create Book : 
-    button(type="submit") Create Book
-  table.table.table-dark
+      input.form-control(type="text" name="q" id='title' placeholder='Search Book' value=value ? value : '')
+    button(type="submit").btn.btn-outline-primary Search
+  table.table.table-light.border
       tr
         td 
           b Title
@@ -22,8 +17,11 @@ block content
             span=book.title
           td
             a(href='/book/view/'+book.id) 
-              button.btn.btn-light(type='button') View
+              button.btn.btn-outline-dark(type='button') View
             a(href="/book/update/"+book.id) 
-              button.btn.btn-light(type='button') Update
+              button.btn.btn-outline-dark(type='button') Update
             a(href="/book/delete/"+book.id) 
-              button.btn.btn-light(type='button') Delete
+              button.btn.btn-outline-dark(type='button') Delete
+  form(method="GET" action="/book/create").form-inline
+    .form-group
+    button(type="submit").btn.btn-outline-success Create Book
