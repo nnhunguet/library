@@ -1,4 +1,5 @@
 extend ../layout/common.pug
 block content
   h1 Transaction
-  form(method='POST' action='/transaction')
+  a(href='/transaction/create') 
+    .btn.btn-primary Create

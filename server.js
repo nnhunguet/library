@@ -11,9 +11,9 @@ var db = require('./db.js');
 app.set('view engine', 'pug')
 
 
-var bookRoute = require('./routes/book.route');
-var userRoute = require('./routes/user.route');
-var transactionRoute = require('./routes/transaction.route');
+var bookRoute = require('./routes/books.route');
+var userRoute = require('./routes/users.route');
+var transactionRoute = require('./routes/transactions.route');
 
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
