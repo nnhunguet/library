@@ -4,7 +4,7 @@ block content
   form(method="GET" action="/book/search")
     .form-group
       label(for="title") Title Book : 
-      input.form-control(type="text" name="q" id="title")
+      input.form-control(type="text" name="q" id="title" value=value ? value : '')
     button(type="submit") Search
   form(method="GET" action="/book/create") 
     .form-group

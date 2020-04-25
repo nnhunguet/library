@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var db = require('../db');
-// var shortid = require('shortid');
+var shortid = require('shortid');
 
 router.get('/', function(req, res) {
   res.render('user/index');
@@ -45,7 +45,7 @@ router.get('/create', function(req, res) {
 router.post('/create', function(req, res) {
   var email = req.body.email;
   var password = req.body.password;
-  var id = db.get('users').value().length+1;
+  var id = shortid.generate();
   var newUser = {
     id: id,
     email: email,
@@ -58,14 +58,14 @@ router.post('/create', function(req, res) {
 
 router.get('/:id', function(req, res) {
   var id = req.params.id;
-  var user = db.get('users').find( {id: parseInt(id)}).value();
+  var user = db.get('users').find( {id: id}).value();
   res.render('methodBook/index', {
     user: user
   });
 });
 
 router.get('/borrow/:id', function(req, res) {
-  res.render('book/user/borrow', {
+  res.render('methodBook/borrow', {
     books: db.get('books').value()
   })
 });

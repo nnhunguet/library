@@ -18,18 +18,19 @@ router.get('/search', function(req, res) {
     return book.title.toLowerCase().indexOf(q.toLowerCase()) !== -1;
   }); 
   res.render('book/index', {
-    books: searchBooks
+    books: searchBooks,
+    value: q
   })
 })
 
 router.get('/delete/:id', function(req, res){
-  var id = parseInt(req.params.id);
+  var id = req.params.id;
   db.get('books').remove({id: id}).write();
   res.redirect('/book');
 })
 
 router.get('/update/:id', function(req, res){
-  var id = parseInt(req.params.id);
+  var id = req.params.id;
   var book = db.get('books').find({id: id}).value();
   res.render('book/update', {
     book: book
