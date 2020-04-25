@@ -68,6 +68,11 @@ router.get('/borrow/:id', function(req, res) {
   res.render('book/user/borrow', {
     books: db.get('books').value()
   })
+});
+
+router.get('/borrowed/:id', function(req, res) {
+  var id = req.params.id;
+  
 })
 
 module.exports = router
