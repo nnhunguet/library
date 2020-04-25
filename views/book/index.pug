@@ -1,11 +1,11 @@
 extends ../layout/common.pug
 block content
   
-  form(method="GET" action="/book/search")
-    .form-group
-      label(for="title") Title Book : 
+  form(method="GET" action="/book/search").form-inline
+    .form-group.mr-2
+      label(for="title") 
       input.form-control(type="text" name="q" id="title" value=value ? value : '')
-    button(type="submit") Search
+    button(type="submit").btn.btn-primary Search
   form(method="GET" action="/book/create") 
     .form-group
       label(for="create") Create Book : 
