@@ -13,3 +13,8 @@ module.exports.create = function(req, res) {
     books: books
   });
 }
+
+module.exports.postCreate = function(req, res) {
+  console.log(req.body);
+  res.redirect('/');
+}
