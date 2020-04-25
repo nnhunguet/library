@@ -15,6 +15,6 @@ module.exports.create = function(req, res) {
 }
 
 module.exports.postCreate = function(req, res) {
-  console.log(req.body);
+  console.log(req.body)
   res.redirect('/');
 }
