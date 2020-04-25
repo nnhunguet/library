@@ -1,11 +1,18 @@
 extend ../layout/common.pug
 block content
   form(action='transaction/create' method="POST")
-    table 
+    table.table
       tr
+        td
           select.custom-select
             option(selected='') Select User
             each user in users
               option
                 span=user.email
-
+        td
+          select.custom-select
+            option(selected='') Select Book
+            each book in books
+              option
+                span=book.title
+    button(type='submit').btn.btn-dark.mr-0 Submit
