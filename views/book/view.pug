@@ -1,2 +1,5 @@
-h1=book.title
-p= book.description
+extends ../layout/common.pug
+block content
+  blockquote.blockquote.text-center
+    h1.mb-0=book.title
+    footer.blockquote-footer=book.description
