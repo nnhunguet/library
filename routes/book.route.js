@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var db = require('../db.js');
-// var shortid = require('shortid');
+var shortid = require('shortid');
 
 router.get('/', function(req, res){
   var books = db.get('books').value();
@@ -57,7 +57,7 @@ router.get('/create', function(req, res) {
 router.post('/create', function(req, res) {
   var title = req.body.title;
   var desc = req.body.desc;
-  var id = db.get('books').value().length + 1;
+  var id = shortid.generate();
   var newBook = {
     id: id,
     title: title,
@@ -67,5 +67,12 @@ router.post('/create', function(req, res) {
   console.log(db.get('books').value())
   res.redirect('/book');
 });
+
+router.get('/view/:id', function(req, res) {
+  var id = req.params.id;
+  res.render('book/view', {
+    book: db.get('books').find({id: id}).value()
+  });
+})
 
 module.exports = router;
