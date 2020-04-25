@@ -2,7 +2,17 @@ var db = require('../db');
 var shortid = require('shortid');
 
 module.exports.index = function(req, res) {
-  res.render('transaction/index');
+  const transactions = db.get('transactions').value();
+  let showTransactions = transactions.map(function(transaction) {
+    let changeTransaction = {
+      id: transaction.id,
+      user: db.get('users').find( {id: transaction.userId} ).value().email,
+      book: db.get('books').find( {id: transaction.bookId} ).value().title
+    }   
+  })
+  res.render('transaction/index', {
+    showTransactions: showTransactions
+  });
 }
 
 module.exports.create = function(req, res) {

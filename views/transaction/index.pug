@@ -1,6 +1,9 @@
 extend ../layout/common.pug
 block content
-  h1.display-4.text-center  Transaction
+  h1.display-4.text-center  All Transaction
+  table 
+    each show in transactions
+      tr
   hr
-  a(href='/transaction/create') 
-    .btn.btn-primary.btn-block Create
+  a(href='/transaction/create').text-decoration-none
+    .btn.btn-outline-danger.btn-block Create
