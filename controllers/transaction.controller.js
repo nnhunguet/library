@@ -30,7 +30,8 @@ module.exports.postCreate = function(req, res) {
   var newTransaction = {
     id: shortid.generate(),
     userId: req.body.user,
-    bookId: req.body.book
+    bookId: req.body.book,
+    isComplete: false
   };
   
   db.get('transactions').push(newTransaction).write();
@@ -40,5 +41,7 @@ module.exports.postCreate = function(req, res) {
 
 
 module.exports.complete = function(req, res) {
-  res.send('Hello');
+  let id = req.params.id;
+  db.get('transactions').find({id}).assign({isComplete: true}).write();
+  return res.redirect('/');
 }
