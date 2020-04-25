@@ -4,9 +4,9 @@ var router = express.Router();
 var db = require('../db');
 var shortid = require('shortid');
 
-router.get('/', function(req, res) {
-  res.render('user/index');
-});
+var controller = require('../controllers/user.controller')
+
+router.get('/', controller.index);
 
 router.get('/login', function(req, res) {
   res.render('user/login');
