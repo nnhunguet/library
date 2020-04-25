@@ -18,7 +18,6 @@ router.post('/login', function(req, res) {
   var errors = [];
   if(!user) { 
     errors.push('User not exit');
-    res.redirect('')
   } else {
     if(password !== user.password) {
       errors.push('Wrong password');
@@ -26,7 +25,7 @@ router.post('/login', function(req, res) {
   }
   
   if(errors.length > 0) {
-    res.redirect('/', {
+    res.redirect('/login', {
       errors: errors
     })
   } else {
@@ -46,7 +45,7 @@ router.post('/create', function(req, res) {
     password: password
   };
   db.get('users').push(newUser).write();
-  res.redirect('/user/login')
+  res.redirect('/user/login');
 })
 
 module.exports = router
