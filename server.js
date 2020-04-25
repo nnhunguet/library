@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 // our default array of dreams
 
 app.get('/', function(req, res) {
-  render
+  res.render('index');
 })
 
 app.use('/book', bookRoute);
