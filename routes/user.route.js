@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var db = require('../db');
-var shortid = require('shortid');
+// var shortid = require('shortid');
 
 router.get('/', function(req, res) {
   res.render('user/index');
@@ -35,7 +35,7 @@ router.post('/login', function(req, res) {
     return;
   }
   
-  res.render('methodBook/index');
+  res.redirect('/'+user.id);
 })
 
 router.get('/create', function(req, res) {
@@ -45,7 +45,9 @@ router.get('/create', function(req, res) {
 router.post('/create', function(req, res) {
   var email = req.body.email;
   var password = req.body.password;
+  var id = db.get('users').value().length;
   var newUser = {
+    id: id,
     email: email,
     password: password
   };

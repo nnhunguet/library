@@ -22,6 +22,15 @@
     {
       "email": "nnhungjs@gmail.com",
       "password": "12345"
+    },
+    {
+      "email": "nghiahunguet@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 5,
+      "email": "tranlananh131@gmail.com",
+      "password": "123456"
     }
   ]
 }
