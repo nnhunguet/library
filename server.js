@@ -17,7 +17,7 @@ var transactionRoute = require('./routes/transactions.route');
 
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
-
+app.use(express.static('public'));
 
 // our default array of dreams
 
