@@ -1,5 +1,8 @@
 extends ../layout/common.pug
 block content
+  if errors 
+    each error in errors
+      alter=erro
   h1.display-4.text-center Create Account Coders-X
   p.text-center.font-weght-light Free Education
   form(action="/user/create" method="POST")
