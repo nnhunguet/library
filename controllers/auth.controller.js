@@ -9,6 +9,7 @@ module.exports.postLogin = function(req, res, next) {
   var email = req.body.email;
   var password = req.body.password;
   var user = db.get('users').find( {email: email} ).value();
+  console.log(user);
   var errors = [];
   if(!user) { 
     res.render('user/login', {
@@ -31,5 +32,6 @@ module.exports.postLogin = function(req, res, next) {
   }
   
   res.cookie('userId', user.id);
+  console.log(req.cookies);
   res.redirect('/book');
 };
