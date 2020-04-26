@@ -4,7 +4,7 @@ var shortid = require('shortid');
 module.exports.index = function(req, res) {
   var isAdmin;
   var id = req.cookies.userId;
-  if(db.get('users').find({id:id}).isAdmin) {
+  if(db.get('users').find({id:id}).value().isAdmin) {
     isAdmin = true;
   }
   var transactions = db.get('transactions').value();
@@ -20,6 +20,7 @@ module.exports.index = function(req, res) {
     return changeTransaction;
   })
   console.log(showTransactions);
+  console.log(isAdmin);
   res.render('transaction/index', {
     showTransactions: showTransactions,
     isAdmin: isAdmin
