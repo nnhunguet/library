@@ -30,8 +30,6 @@ module.exports.postLogin = function(req, res, next) {
     });
     return;
   }
-  console.log(user.id);
   res.cookie('userId', user.id);
-  console.log(req.cookies);
   res.redirect('/book');
 };

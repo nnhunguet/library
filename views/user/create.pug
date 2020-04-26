@@ -9,7 +9,9 @@ block content
       input#email.form-control(type='email' name='email' value= value ? value : '')
     .form-group
       label(for='password') Password
-      input#password.form-control(type='password' name='password')
+      input#password.form-control(type='password' name='password' value='123123')
+      small.text-form.text-mute Default PassWord: 
+        b "123123"
     button.btn.btn-primary(type='submit') Create
   if errors 
     each error in errors
