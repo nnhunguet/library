@@ -21,4 +21,3 @@ module.exports.postCreate = function(req, res, next) {
   res.locals.errors = errors;
   next();
 }
-
