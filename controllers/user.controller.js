@@ -58,11 +58,12 @@ module.exports.postCreate = function(req, res) {
     errors.push('Password very easy')
   }
   
-  if(errors > 0) {
-    res.render('/user/create', {
+  if(errors.length > 0) {
+    res.render('user/create', {
       errors: errors,
       values: values
     })
+    return;
   }
   
   var newUser = {

@@ -1,15 +1,16 @@
 extends ../layout/common.pug
 block content
-  if errors 
-    each error in errors
-      alter=erro
+  
   h1.display-4.text-center Create Account Coders-X
   p.text-center.font-weght-light Free Education
   form(action="/user/create" method="POST")
     .form-group
       label(for='email') Email address
-      input#email.form-control(type='email' name='email')
+      input#email.form-control(type='email' name='email' value= values.email ? values.email : '')
     .form-group
       label(for='password') Password
       input#password.form-control(type='password' name='password')
     button.btn.btn-primary(type='submit') Create
+  if errors 
+    each error in errors
+      .alert.alert-danger=error
