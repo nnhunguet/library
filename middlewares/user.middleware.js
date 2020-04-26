@@ -1,4 +1,4 @@
-vả 
+var db = require('../db');
 
 module.exports.postCreate = function(req, res, next) {
   var email = req.body.email;
@@ -22,7 +22,7 @@ module.exports.postCreate = function(req, res, next) {
   next();
 }
 
-module.exports.postLogin = function(req, res) {
+module.exports.postLogin = function(req, res, next) {
   var email = req.body.email;
   var password = req.body.password;
   var user = db.get('users').find( {email: email} ).value();
@@ -45,5 +45,8 @@ module.exports.postLogin = function(req, res) {
     return;
   }
   
+  res.cookie('userId', user.id);
   res.redirect('/user/'+user.id);
+  
+  next();
 };

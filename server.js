@@ -13,7 +13,7 @@ app.set('view engine', 'pug')
 var bookRoute = require('./routes/books.route');
 var userRoute = require('./routes/users.route');
 var transactionRoute = require('./routes/transactions.route');
-var middlewareCookie = require('./middlewares/cookie.middleware');
+// var middlewareCookie = require('./middlewares/cookie.middleware');
 
 var cookieParser = require('cookie-parser')
 
@@ -27,14 +27,14 @@ app.use(cookieParser());
 
 
 app.get('/', function(req, res) {
-  res.cookie('cookie', shortid.generate());
-  res.locals.countCookie = 0;
+  // res.cookie('cookie', shortid.generate());
+  // res.locals.countCookie = 0;
   res.render('index');
 })
 
-app.use('/book', middlewareCookie.cookie, bookRoute);
-app.use('/user', middlewareCookie.cookie, userRoute);
-app.use('/transactions', middlewareCookie.cookie, transactionRoute);
+app.use('/book', bookRoute);
+app.use('/user', userRoute);
+app.use('/transactions', transactionRoute);
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
