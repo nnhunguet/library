@@ -1,4 +1,6 @@
 module.exports.requireAuth = function(req, res, next) {
+  console.log('Cookie: ');
+  console.log(req.cookies.userId);
   if(!req.cookies.userId) {
     res.redirect('/user/login');
     return;
