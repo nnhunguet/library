@@ -14,8 +14,9 @@ module.exports.postLogin = function(req, res, next) {
     res.render('user/login', {
       errors: [
         'User not exit'
-      ]
-    })
+      ],
+      value: email
+    });
     return;
   }
   
@@ -23,7 +24,8 @@ module.exports.postLogin = function(req, res, next) {
     res.render('user/login', {
       errors: [
         'Wrong PassWord'
-      ]
+      ],
+      value: email
     });
     return;
   }
