@@ -9,10 +9,12 @@ module.exports.postCreate = function(req, res, next) {
   if(!password) {
     errors.push('Password is not required');
   }
-  
-  if(password.length < 30) {
-    errors.push('Password very easy || Length Password > 30 character');
-  }
+  else {
+      if(password.length < 30) {
+      errors.push('Password very easy || Length Password > 30 character');
+      }
+  }  
+
   
   res.locals.errors = errors;
   next();

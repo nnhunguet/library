@@ -15,7 +15,7 @@ router.post('/login', controller.postLogin);
 
 router.get('/create', controller.create);
 
-router.post('/create', middlewareUser.postCreate, controller.postCreate);t
+router.post('/create', middlewareUser.postCreate, controller.postCreate);
 
 router.get('/:id', function(req, res) {
   var id = req.params.id;

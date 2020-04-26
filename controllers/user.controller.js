@@ -44,7 +44,7 @@ module.exports.postCreate = function(req, res) {
   var password = req.body.password;
   var id = shortid.generate();
   
-  var errors = res.local.errors;
+  var errors = res.locals.errors;
   
   if(errors.length > 0) {
     res.render('user/create', {
