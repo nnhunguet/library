@@ -32,6 +32,5 @@ module.exports.postLogin = function(req, res, next) {
   }
   
   res.cookie('userId', user.id);
-  console.log(req.cookies);
   res.redirect('/book');
 };
