@@ -24,6 +24,9 @@ module.exports.postLogin = function(req, res, next) {
 var result = false;  
 bcrypt.compare(password, user.password, function(err, result) {
     // result == true
+  var count = 1 ;
+  count++;
+  console.log(count);
   result = result;
   console.log(typeof result);
   console.log(result);
