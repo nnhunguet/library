@@ -5,6 +5,7 @@ var db = require('../db');
 var shortid = require('shortid');
 
 var controller = require('../controllers/user.controller');
+var middlewareUser = require('../middlewares/user.middleware');
 
 router.get('/', controller.index);
 
@@ -14,7 +15,7 @@ router.post('/login', controller.postLogin);
 
 router.get('/create', controller.create);
 
-router.post('/create', controller.postCreate)
+router.post('/create', middlewareUser.postCreate, controller.postCreate);t
 
 router.get('/:id', function(req, res) {
   var id = req.params.id;
