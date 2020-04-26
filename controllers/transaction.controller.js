@@ -10,10 +10,12 @@ module.exports.index = function(req, res) {
       id: transaction.id,
       user: db.get('users').find( {id: transaction.userId} ).value().email,
       book: db.get('books').find( {id: transaction.bookId} ).value().title,
-      isComplete: transaction.isComplete
+      isComplete: transaction.isComplete,
+      isAdmin: transaction.isAdmin
     }
     return changeTransaction;
   })
+  console.log(showTransactions);
   res.render('transaction/index', {
     showTransactions: showTransactions
   });

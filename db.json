@@ -25,7 +25,8 @@
     {
       "id": "gEebdYH-k",
       "email": "nnhungjs@gmail.com",
-      "password": "12345"
+      "password": "12345",
+      "isAdmin": true
     },
     {
       "id": "qW6qBpEGN",
@@ -46,9 +47,9 @@
       "isComplete": true
     },
     {
-      "id": "7gSQibGiu",
+      "id": "lmZLLmh-g",
       "userId": "qW6qBpEGN",
-      "bookId": "cCCL6sYxA",
+      "bookId": "byj8WQjd3",
       "isComplete": false
     }
   ]
