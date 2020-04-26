@@ -6,7 +6,7 @@
 const express = require("express");
 const app = express();
 var db = require('./db.js');
-// var shortid = require('shortid')
+var shortid = require('shortid');
 
 app.set('view engine', 'pug')
 
@@ -21,7 +21,9 @@ app.use(express.static('public'));
 
 // our default array of dreams
 
+
 app.get('/', function(req, res) {
+  res.cookie('cookie', shortid.generate())
   res.render('index');
 })
 
