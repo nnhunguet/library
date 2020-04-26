@@ -38,28 +38,5 @@
       "password": "123"
     }
   ],
-  "transactions": [
-    {
-      "id": "2N3VWJKOw",
-      "userId": "gEebdYH-k",
-      "bookId": "cCCL6sYxA"
-    },
-    {
-      "id": "HzsA4gYQP",
-      "userId": "gEebdYH-k",
-      "bookId": "cCCL6sYxA",
-      "isComplete": true
-    },
-    {
-      "id": "Kq5BXwUk2",
-      "userId": "gEebdYH-k",
-      "bookId": "YZK6tOGcm"
-    },
-    {
-      "id": "m6XNdAEap",
-      "userId": "gEebdYH-k",
-      "bookId": "cCCL6sYxA",
-      "isComplete": false
-    }
-  ]
+  "transactions": []
 }
