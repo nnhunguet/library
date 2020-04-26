@@ -34,11 +34,12 @@ bcrypt.compare(password, user.password, function(err, result) {
       ],
       value: email
     });
+  } else {
+      res.cookie('userId', user.id);
+    res.redirect('/transactions');
   }
 });
   if(!result) {
     return;
   }
-  res.cookie('userId', user.id);
-  res.redirect('/transactions');
 };
