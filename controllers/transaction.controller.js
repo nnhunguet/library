@@ -2,22 +2,27 @@ var db = require('../db');
 var shortid = require('shortid');
 
 module.exports.index = function(req, res) {
+  var isAdmin;
+  var id = req.cookies.userId;
+  if(db.get('users').find({id:id}).isAdmin) {
+    isAdmin = true;
+  }
   var transactions = db.get('transactions').value();
   console.log(transactions);
-  console.log(db.get('books').value());
   let showTransactions = transactions.map(function(transaction) {
     let changeTransaction = {
       id: transaction.id,
       user: db.get('users').find( {id: transaction.userId} ).value().email,
       book: db.get('books').find( {id: transaction.bookId} ).value().title,
       isComplete: transaction.isComplete,
-      isAdmin: transaction.isAdmin
+      isAdmin: db.get('users').find( {id: transaction.userId} ).value().isAdmin
     }
     return changeTransaction;
   })
   console.log(showTransactions);
   res.render('transaction/index', {
-    showTransactions: showTransactions
+    showTransactions: showTransactions,
+    isAdmin: isAdmin
   });
 }
 
