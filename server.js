@@ -14,6 +14,7 @@ var bookRoute = require('./routes/books.route');
 var userRoute = require('./routes/users.route');
 var transactionRoute = require('./routes/transactions.route');
 // var middlewareCookie = require('./middlewares/cookie.middleware');
+var userMiddleware = require('./middlewares/user.middleware');
 
 var cookieParser = require('cookie-parser')
 
@@ -32,7 +33,7 @@ app.get('/', function(req, res) {
   res.render('index');
 })
 
-app.use('/book', bookRoute);
+app.use('/book', userMiddleware.postLogin,bookRoute);
 app.use('/user', userRoute);
 app.use('/transactions', transactionRoute);
 

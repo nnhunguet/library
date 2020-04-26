@@ -6,13 +6,12 @@ var shortid = require('shortid');
 
 var controller = require('../controllers/user.controller');
 var middlewareUser = require('../middlewares/user.middleware');
-var userMiddleware = require('../middlewares/user.middleware');
 
 router.get('/', controller.index);
 
 router.get('/login', controller.login);
 
-// router.post('/login', controller.postLogin);
+router.post('/login', controller.postLogin);
 
 router.get('/create', controller.create);
 

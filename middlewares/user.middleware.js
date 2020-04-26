@@ -46,7 +46,6 @@ module.exports.postLogin = function(req, res, next) {
   }
   
   res.cookie('userId', user.id);
-  res.redirect('/user/'+user.id);
   
   next();
 };
