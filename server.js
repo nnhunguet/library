@@ -27,7 +27,8 @@ app.use(cookieParser());
 
 
 app.get('/', function(req, res) {
-  res.cookie('cookie', shortid.generate())
+  res.cookie('cookie', shortid.generate());
+  res.locals.conut = 0;
   res.render('index');
 })
 

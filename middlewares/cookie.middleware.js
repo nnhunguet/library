@@ -1,3 +1,7 @@
 module.exports.cookie = function(req, res, next) {
-  console.log(req.cookies);
+  if(req.cookies)  {
+      var countCookie = {[req.cookies.cookie]: req.locals.cookie++};
+      console.log(countCookie);
+  }
+  next();
 }
