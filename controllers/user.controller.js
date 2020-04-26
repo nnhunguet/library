@@ -1,5 +1,7 @@
 var db = require('../db');
 var shortid = require('shortid');
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 module.exports.index = function(req, res) {
   res.render('user/index');
@@ -24,10 +26,16 @@ module.exports.postCreate = function(req, res) {
     return;
   }
   
+  var hashPassword = bcrypt.genSalt(saltRounds, function(err, salt) {
+    bcrypt.hash(password, salt, function(err, hash) {
+        // Store hash in your password DB.
+      return hash;
+    });
+});
   var newUser = {
     id: id,
     email: email,
-    password: password
+    password: hashPassword
   };
   db.get('users').push(newUser).write();
   console.log(db.get('users').value());
