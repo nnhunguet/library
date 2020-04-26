@@ -38,5 +38,12 @@
       "password": "123"
     }
   ],
-  "transactions": []
+  "transactions": [
+    {
+      "id": "m8abNWAaN",
+      "userId": "gEebdYH-k",
+      "bookId": "O8KxrU10_",
+      "isComplete": true
+    }
+  ]
 }

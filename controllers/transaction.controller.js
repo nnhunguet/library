@@ -8,7 +8,8 @@ module.exports.index = function(req, res) {
     let changeTransaction = {
       id: transaction.id,
       user: db.get('users').find( {id: transaction.userId} ).value().email,
-      book: db.get('books').find( {id: transaction.bookId} ).value().title
+      book: db.get('books').find( {id: transaction.bookId} ).value().title,
+      isComplete: transaction.isComplete
     }
     return changeTransaction;
   })
@@ -27,6 +28,7 @@ module.exports.create = function(req, res) {
 }
 
 module.exports.postCreate = function(req, res) {
+  console.log(req.body)
   var newTransaction = {
     id: shortid.generate(),
     userId: req.body.user,
@@ -34,7 +36,7 @@ module.exports.postCreate = function(req, res) {
     isComplete: false
   };
   
-  db.get('/transactions').push(newTransaction).write();
+  db.get('transactions').push(newTransaction).write();
   console.log(db.get('transactions').value());
   res.redirect('/');
 }
