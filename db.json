@@ -60,6 +60,12 @@
       "userId": "gEebdYH-k",
       "bookId": "YZK6tOGcm",
       "isComplete": true
+    },
+    {
+      "id": "M6k1XiPxq",
+      "userId": "gEebdYH-k",
+      "bookId": "byj8WQjd3",
+      "isComplete": false
     }
   ]
 }

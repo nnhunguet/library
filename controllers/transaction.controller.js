@@ -44,6 +44,8 @@ module.exports.postCreate = function(req, res) {
 
 module.exports.complete = function(req, res) {
   let id = req.params.id;
-  db.get('transactions').find({id}).assign({isComplete: true}).write();
+  if(db.get('transactions').find({id})) {
+    db.get('transactions').find({id}).assign({isComplete: true}).write();
+  }
   res.redirect('/');
 }

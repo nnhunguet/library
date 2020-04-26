@@ -6,7 +6,7 @@ block content
   form(action="/user/create" method="POST")
     .form-group
       label(for='email') Email address
-      input#email.form-control(type='email' name='email' value= values.email ? values.email : '')
+      input#email.form-control(type='email' name='email' value= value ? value : '')
     .form-group
       label(for='password') Password
       input#password.form-control(type='password' name='password')

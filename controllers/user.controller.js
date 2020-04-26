@@ -44,24 +44,23 @@ module.exports.postCreate = function(req, res) {
   var password = req.body.password;
   var id = shortid.generate();
   
-  var values = {
-    email: email,
-    password: password
-  }
-  
   var errors = [];
   if(!email) {
     errors.push('Name is not required');
   }
   
   if(!password) {
-    errors.push('Password very easy')
+    errors.push('Password is not required');
+  }
+  
+  if(password.length < 30) {
+    errors.push('Password very easy || Length Password > 30 character');
   }
   
   if(errors.length > 0) {
     res.render('user/create', {
       errors: errors,
-      values: values
+      value: email
     })
     return;
   }
