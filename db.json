@@ -23,29 +23,24 @@
   ],
   "users": [
     {
-      "id": "gEebdYH-k",
+      "id": "maTqqil4A",
       "email": "nnhungjs@gmail.com",
-      "password": "12345",
-      "isAdmin": true
+      "password": "$2b$10$XW4gTT6is1a3dMDwsLEUpO0HwzxbjyO1iEeMCfdvhWlb8EikIEb4K"
     },
     {
-      "id": "qW6qBpEGN",
-      "email": "fsafd@dfasfda",
-      "password": "dafas"
+      "id": "_J4C1vF8P",
+      "email": "nnhungjs@gmail.com",
+      "password": "$2b$10$FEJL.pzBuGiADs52Hde9q.D2hpqMo3D47AQqle.WzHlSiZ3WAzyVu"
     },
     {
-      "id": "UT7gscjRj",
-      "email": "hello@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "eefZ2ApRZ",
+      "id": "PScze_xrJ",
       "email": "nnhungjs@123",
-      "password": "123123"
+      "password": "$2b$10$fzGj.Z8M3CoHJ4Tum9gUtOrhzoWTuMBQEpe6INvCO05/TdMeuHFC6"
     },
     {
-      "id": "YIPSdMTOw",
-      "email": "nghiahunguet@gmail.com"
+      "id": "cgc7Y4P10",
+      "email": "nghiahunguet@gmail.com",
+      "password": "$2b$10$gjkMV6/71F.tPMRDOvp4YuIkz/BsbzYASK.g.VfGgQ8pVJROLLkcq"
     }
   ],
   "transactions": [

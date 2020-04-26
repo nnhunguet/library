@@ -26,18 +26,17 @@ module.exports.postCreate = function(req, res) {
     return;
   }
   
-  var hashPassword = bcrypt.genSalt(saltRounds, function(err, salt) {
-    bcrypt.hash(password, salt, function(err, hash) {
-        // Store hash in your password DB.
-      return hash;
-    });
-});
-  var newUser = {
+bcrypt.hash(password, saltRounds, function(err, hash) {
+    // Store hash in your password DB.
+  var hash = hash;
+    var newUser = {
     id: id,
     email: email,
-    password: hashPassword()
+    password: hash
   };
   db.get('users').push(newUser).write();
+});
+  
   console.log(db.get('users').value());
   res.redirect('/user/login');
 }; 
