@@ -12,7 +12,9 @@ app.set('view engine', 'pug')
 
 var bookRoute = require('./routes/books.route');
 var userRoute = require('./routes/users.route');
+var authRoute = require('./routes/auth.route')
 var transactionRoute = require('./routes/transactions.route');
+
 // var middlewareCookie = require('./middlewares/cookie.middleware');
 // var authMiddleware = require('./middlewares/auth.middleware');
 
@@ -32,7 +34,7 @@ app.get('/', function(req, res) {
   // res.locals.countCookie = 0;
   res.render('index');
 })
-
+app.use('', authRoute);
 app.use('/book', bookRoute);
 app.use('/user', userRoute);
 app.use('/transactions', transactionRoute);
