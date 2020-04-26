@@ -15,7 +15,7 @@ block content
             if !showTransaction.isComplete
               a(href='/transactions/'+ showTransaction.id +'/complete') Finish
             else 
-              a(href='#' disable) Finished
+              p Finished
   hr
   a(href='/transactions/create').text-decoration-none
     .btn.btn-outline-danger.btn-block Create
