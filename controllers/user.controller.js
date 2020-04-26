@@ -35,7 +35,7 @@ module.exports.postCreate = function(req, res) {
   var newUser = {
     id: id,
     email: email,
-    password: hashPassword
+    password: hashPassword()
   };
   db.get('users').push(newUser).write();
   console.log(db.get('users').value());
