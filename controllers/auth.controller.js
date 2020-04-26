@@ -1,5 +1,6 @@
 var db = require('../db');
-
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 module.exports.login = function(req, res) {
   res.render('user/login');
@@ -20,14 +21,22 @@ module.exports.postLogin = function(req, res, next) {
     });
     return;
   }
-  
-  if(password !== user.password) {
+var result = false;  
+bcrypt.compare(password, user.password, function(err, result) {
+    // result == true
+  result = result;
+  console.log(typeof result);
+  console.log(result);
+  if(!result) {
     res.render('user/login', {
       errors: [
         'Wrong PassWord'
       ],
       value: email
     });
+  }
+});
+  if(!result) {
     return;
   }
   res.cookie('userId', user.id);
