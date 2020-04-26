@@ -1,71 +1,33 @@
 {
   "books": [
     {
-      "id": "cCCL6sYxA",
+      "id": "jd99YYuGR",
       "title": "Thế Giới Phẳng",
       "description": "The World Flat"
     },
     {
-      "id": "byj8WQjd3",
+      "id": "0Xe9mH6YH",
       "title": "Đắc Nhân Tâm",
       "description": "Sách hay lắm nhưng chưa đọc :))"
     },
     {
-      "id": "YZK6tOGcm",
+      "id": "l0ykMdXSP",
       "title": "Nhà Giả Kim",
       "description": "Sách viết về hành trình của nhà giả kim"
-    },
-    {
-      "id": "O8KxrU10_",
-      "title": "Javascript",
-      "description": "Khó"
     }
   ],
   "users": [
     {
-      "id": "maTqqil4A",
+      "id": "jV9eD59Yd",
       "email": "nnhungjs@gmail.com",
-      "password": "$2b$10$XW4gTT6is1a3dMDwsLEUpO0HwzxbjyO1iEeMCfdvhWlb8EikIEb4K"
-    },
-    {
-      "id": "_J4C1vF8P",
-      "email": "nnhungjs@gmail.com",
-      "password": "$2b$10$FEJL.pzBuGiADs52Hde9q.D2hpqMo3D47AQqle.WzHlSiZ3WAzyVu"
-    },
-    {
-      "id": "PScze_xrJ",
-      "email": "nnhungjs@123",
-      "password": "$2b$10$fzGj.Z8M3CoHJ4Tum9gUtOrhzoWTuMBQEpe6INvCO05/TdMeuHFC6"
-    },
-    {
-      "id": "cgc7Y4P10",
-      "email": "nghiahunguet@gmail.com",
-      "password": "$2b$10$gjkMV6/71F.tPMRDOvp4YuIkz/BsbzYASK.g.VfGgQ8pVJROLLkcq"
+      "password": "$2b$10$Hz9ZW336T43qJRyt4j9f4ONqaHo6Qx96YAXpyVQSibj5v1wzKMAre"
     }
   ],
   "transactions": [
     {
-      "id": "oT3GNn4nM",
-      "userId": "gEebdYH-k",
-      "bookId": "O8KxrU10_",
-      "isComplete": true
-    },
-    {
-      "id": "lmZLLmh-g",
-      "userId": "qW6qBpEGN",
-      "bookId": "byj8WQjd3",
-      "isComplete": false
-    },
-    {
-      "id": "NxJCX_TcH",
-      "userId": "eefZ2ApRZ",
-      "bookId": "cCCL6sYxA",
-      "isComplete": false
-    },
-    {
-      "id": "yaPoHmf63",
-      "userId": "gEebdYH-k",
-      "bookId": "cCCL6sYxA",
+      "id": "KwuKZBeK4",
+      "userId": "jV9eD59Yd",
+      "bookId": "jd99YYuGR",
       "isComplete": false
     }
   ]
