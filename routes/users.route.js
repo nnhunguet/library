@@ -9,10 +9,6 @@ var middlewareUser = require('../middlewares/user.middleware');
 
 router.get('/', controller.index);
 
-router.get('/login', controller.login);
-
-router.post('/login', controller.postLogin);
-
 router.get('/create', controller.create);
 
 router.post('/create', middlewareUser.postCreate, controller.postCreate);
