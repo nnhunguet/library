@@ -1,9 +1,10 @@
-var db = require('../db');
+var db = require('../db'); 
 var shortid = require('shortid');
 
 module.exports.index = function(req, res) {
   var transactions = db.get('transactions').value();
   console.log(transactions);
+  console.log(db.get('books').value());
   let showTransactions = transactions.map(function(transaction) {
     let changeTransaction = {
       id: transaction.id,

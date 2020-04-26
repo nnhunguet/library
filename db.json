@@ -14,6 +14,11 @@
       "id": "YZK6tOGcm",
       "title": "Nhà Giả Kim",
       "description": "Sách viết về hành trình của nhà giả kim"
+    },
+    {
+      "id": "O8KxrU10_",
+      "title": "Javascript",
+      "description": "Khó"
     }
   ],
   "users": [
@@ -45,27 +50,9 @@
   ],
   "transactions": [
     {
-      "id": "m8abNWAaN",
+      "id": "oT3GNn4nM",
       "userId": "gEebdYH-k",
       "bookId": "O8KxrU10_",
-      "isComplete": true
-    },
-    {
-      "id": "7rhZceqZD",
-      "userId": "gEebdYH-k",
-      "bookId": "YZK6tOGcm",
-      "isComplete": true
-    },
-    {
-      "id": "M6k1XiPxq",
-      "userId": "gEebdYH-k",
-      "bookId": "byj8WQjd3",
-      "isComplete": true
-    },
-    {
-      "id": "UUYSkqEC-",
-      "userId": "qW6qBpEGN",
-      "bookId": "cCCL6sYxA",
       "isComplete": true
     }
   ]
