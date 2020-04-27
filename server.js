@@ -5,6 +5,7 @@
 // but feel free to use whatever libraries or frameworks you'd like through `package.json`.
 const express = require("express");
 const app = express();
+const sgMail = require('@sendgrid/mail');
 var db = require('./db.js');
 var shortid = require('shortid');
 
@@ -28,7 +29,16 @@ app.use(express.static('public'));
 app.use(cookieParser(process.env.SECRET_COOKIES));
 // our default array of dreams
 
-
+// send grid
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  const msg = {
+    to: 'nghiahunguet@gmail.com',
+    from: 'nghiahunguet@gmail.com',
+    subject: 'Sending with Twilio SendGrid is Fun',
+    text: 'and easy to do anywhere, even with Node.js',
+    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+  };
+  sgMail.send(msg)
 app.get('/', function(req, res) {
   // res.cookie('cookie', shortid.generate());
   // res.locals.countCookie = 0;
