@@ -45,13 +45,13 @@ bcrypt.compare(password, user.password, function(err, result) {
     });
   } else {
       // db.get('users').find({ id: user.id}).update('wrongLoginCount', n => 0).write();
-    console.log(1);
+      
       res.cookie('userId', user.id, {
         signed: true
       });
       res.redirect('/transactions');
-  }
-});
+        }
+      });
   if(!result) {
     return;
   }
