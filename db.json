@@ -20,7 +20,8 @@
     {
       "id": "jV9eD59Yd",
       "email": "nnhungjs@gmail.com",
-      "password": "$2b$10$Hz9ZW336T43qJRyt4j9f4ONqaHo6Qx96YAXpyVQSibj5v1wzKMAre"
+      "password": "$2b$10$Hz9ZW336T43qJRyt4j9f4ONqaHo6Qx96YAXpyVQSibj5v1wzKMAre",
+      "wrongLoginCount": 4
     },
     {
       "id": "uhP9KMKtT",
