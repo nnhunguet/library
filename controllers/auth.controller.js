@@ -22,7 +22,29 @@ module.exports.postLogin = function(req, res, next) {
     return;
   }
   
-    if(db.get('users').find({ id: user.id}).value().wrongLoginCount===4) {
+  if(db.get('users').find({ id: user.id}).value().wrongLoginCount===4) {
+    const sgMail = require('@sendgrid/mail');
+
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    // console.log(process.env.SENDGRID_API_KEY);
+    const msg = {
+      to: user.email,
+      from: 'nghiahunguet@gmail.com',
+      subject: 'Wrong PassWord',
+      text: 'Hey Bro!!!!!!!!!!!!!',
+      html: '<strong> Ông nhập sai mật khẩu vừa vừa thôi =.= /strong>',
+    };
+    sgMail
+      .send(msg)
+      .then((res) => {
+        console.log(res);
+      }, error => {
+        console.error(error);
+
+    if (error.response) {
+        console.error(error.response.body)
+      }
+    });
     res.render('user/login', {
       errors: [
         'Wrong Hash Password'
