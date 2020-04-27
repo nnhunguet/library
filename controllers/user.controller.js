@@ -4,7 +4,8 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
 module.exports.index = function(req, res) {
-        const sgMail = require('@sendgrid/mail');
+  console.log(1);
+      const sgMail = require('@sendgrid/mail');
       sgMail.setApiKey(process.env.SENDGRID_API_KEY);
       const msg = {
         to: 'test@example.com',
@@ -13,7 +14,14 @@ module.exports.index = function(req, res) {
         text: 'and easy to do anywhere, even with Node.js',
         html: '<strong>and easy to do anywhere, even with Node.js</strong>',
       };
-      sgMail.send(msg);
+      sgMail.send(msg)
+      .then(() => {}, error => {
+        console.error(error);
+
+        if (error.response) {
+          console.error(error.response.body)
+        }
+      });
   res.render('user/index');
 };
 
