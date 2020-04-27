@@ -3,7 +3,7 @@ var shortid = require('shortid');
 
 module.exports.index = function(req, res) {
   var isAdmin;
-  var id = req.cookies.userId;
+  var id = req.signedCookies.userId;
   if(db.get('users').find({id:id}).value().isAdmin) {
     isAdmin = true;
   }

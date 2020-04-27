@@ -25,7 +25,7 @@ app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 app.use(express.static('public'));
 
-app.use(cookieParser('123456'));
+app.use(cookieParser(process.env.SECRET_COOKIES));
 // our default array of dreams
 
 

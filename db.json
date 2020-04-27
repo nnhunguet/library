@@ -26,13 +26,18 @@
     {
       "id": "uhP9KMKtT",
       "email": "nnhungjs@123",
-      "password": "$2b$10$wfRz3hfn1OyJeSfOfVocXeaiooXKQoveMIX9IfPbgc/fL59FkarwS",
-      "wrongLoginCount": null
+      "password": "$2b$10$wfRz3hfn1OyJeSfOfVocXeaiooXKQoveMIX9IfPbgc/fL59FkarwS"
     },
     {
       "id": "O_CiKWiBb",
       "email": "nghiahunguet@gmail.com",
-      "password": "$2b$10$cnLZOebXTxZktFYhKFXntOICmoH3/eW9PlJdgPrUf1ndpMB2wDdH6"
+      "password": "$2b$10$cnLZOebXTxZktFYhKFXntOICmoH3/eW9PlJdgPrUf1ndpMB2wDdH6",
+      "wrongLoginCount": 0
+    },
+    {
+      "id": "Qmvd1Y7Up",
+      "email": "nghiahunguet@gmail.com",
+      "password": "$2b$10$STVYCRIaEmrl/8BxKjH.L.xJO5Zs0yjbusWN2yYmilFxoI4moBgyO"
     }
   ],
   "transactions": [
