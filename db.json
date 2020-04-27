@@ -26,7 +26,13 @@
     {
       "id": "uhP9KMKtT",
       "email": "nnhungjs@123",
-      "password": "$2b$10$wfRz3hfn1OyJeSfOfVocXeaiooXKQoveMIX9IfPbgc/fL59FkarwS"
+      "password": "$2b$10$wfRz3hfn1OyJeSfOfVocXeaiooXKQoveMIX9IfPbgc/fL59FkarwS",
+      "wrongLoginCount": null
+    },
+    {
+      "id": "O_CiKWiBb",
+      "email": "nghiahunguet@gmail.com",
+      "password": "$2b$10$cnLZOebXTxZktFYhKFXntOICmoH3/eW9PlJdgPrUf1ndpMB2wDdH6"
     }
   ],
   "transactions": [

@@ -45,7 +45,9 @@ bcrypt.compare(password, user.password, function(err, result) {
     });
   } else {
       db.get('users').find({ id: user.id}).set('wrongLoginCount', n => 0).write();
-      res.cookie('userId', user.id);
+      res.cookie('userId', user.id, {
+        signed: true
+      });
       res.redirect('/transactions');
   }
 });
