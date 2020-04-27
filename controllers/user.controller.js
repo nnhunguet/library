@@ -2,26 +2,26 @@ var db = require('../db');
 var shortid = require('shortid');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
+const sgMail = require('@sendgrid/mail');
 
 module.exports.index = function(req, res) {
   console.log(1);
-      const sgMail = require('@sendgrid/mail');
-      sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-      const msg = {
-        to: 'test@example.com',
-        from: 'test@example.com',
-        subject: 'Sending with Twilio SendGrid is Fun',
-        text: 'and easy to do anywhere, even with Node.js',
-        html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-      };
-      sgMail.send(msg)
-      .then(() => {}, error => {
-        console.error(error);
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  const msg = {
+    to: 'test@example.com',
+    from: 'test@example.com',
+    subject: 'Sending with Twilio SendGrid is Fun',
+    text: 'and easy to do anywhere, even with Node.js',
+    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+  };
+  sgMail.send(msg)
+  .then(() => {}, error => {
+    console.error(error);
 
-        if (error.response) {
-          console.error(error.response.body)
-        }
-      });
+    if (error.response) {
+      console.error(error.response.body)
+    }
+  });
   res.render('user/index');
 };
 
