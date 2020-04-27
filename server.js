@@ -15,6 +15,7 @@ var bookRoute = require('./routes/books.route');
 var userRoute = require('./routes/users.route');
 var authRoute = require('./routes/auth.route')
 var transactionRoute = require('./routes/transactions.route');
+var blogRoute = require('./routes/blog.route');
 
 // var middlewareCookie = require('./middlewares/cookie.middleware');
 // var authMiddleware = require('./middlewares/auth.middleware');
@@ -29,16 +30,6 @@ app.use(express.static('public'));
 app.use(cookieParser(process.env.SECRET_COOKIES));
 // our default array of dreams
 
-// send grid
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-  const msg = {
-    to: 'nghiahunguet@gmail.com',
-    from: 'nghiahunguet@gmail.com',
-    subject: 'Sending with Twilio SendGrid is Fun',
-    text: 'and easy to do anywhere, even with Node.js',
-    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-  };
-  sgMail.send(msg)
 app.get('/', function(req, res) {
   // res.cookie('cookie', shortid.generate());
   // res.locals.countCookie = 0;
@@ -48,7 +39,7 @@ app.use('', authRoute);
 app.use('/book', bookRoute);
 app.use('/user', userRoute);
 app.use('/transactions', transactionRoute);
-
+app.use('/blog', blogRoute);
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
   console.log("Your app is listening on port " + listener.address().port);
