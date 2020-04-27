@@ -22,6 +22,12 @@
       "email": "nnhungjs@gmail.com",
       "password": "$2b$10$AZo1EcR27STLmWPzrIPEYugCPdlf85t2OHA6/Mr1dRvHvz8SEdlEW",
       "wrongLoginCount": 4
+    },
+    {
+      "id": "gl3nUbebw",
+      "email": "nghiahunguet@gmail.com",
+      "password": "$2b$10$giHQ4lS/plYZJt/Mh7hf7u9UwRkD1TUkmS3./MKP8BOOCBEw8PYmC",
+      "wrongLoginCount": 0
     }
   ],
   "transactions": [
