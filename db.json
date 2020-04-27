@@ -18,15 +18,10 @@
   ],
   "users": [
     {
-      "id": "O_CiKWiBb",
-      "email": "nghiahunguet@gmail.com",
-      "password": "$2b$10$cnLZOebXTxZktFYhKFXntOICmoH3/eW9PlJdgPrUf1ndpMB2wDdH6",
-      "wrongLoginCount": 0
-    },
-    {
-      "id": "Qmvd1Y7Up",
-      "email": "nghiahunguet@gmail.com",
-      "password": "$2b$10$STVYCRIaEmrl/8BxKjH.L.xJO5Zs0yjbusWN2yYmilFxoI4moBgyO"
+      "id": "c5PCp3ifN",
+      "email": "nnhungjs@gmail.com",
+      "password": "$2b$10$AZo1EcR27STLmWPzrIPEYugCPdlf85t2OHA6/Mr1dRvHvz8SEdlEW",
+      "wrongLoginCount": 4
     }
   ],
   "transactions": [

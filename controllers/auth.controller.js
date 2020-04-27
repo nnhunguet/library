@@ -32,7 +32,7 @@ module.exports.postLogin = function(req, res, next) {
       from: 'nghiahunguet@gmail.com',
       subject: 'Wrong PassWord',
       text: 'Hey Bro!!!!!!!!!!!!!',
-      html: '<strong> Ông nhập sai mật khẩu vừa vừa thôi =.= /strong>',
+      html: '<strong> Ông nhập sai mật khẩu vừa vừa thôi =.= </strong> <a href="https://coders-x.com/" Đổi pass ở đây</a>',
     };
     sgMail
       .send(msg)
@@ -47,7 +47,7 @@ module.exports.postLogin = function(req, res, next) {
     });
     res.render('user/login', {
       errors: [
-        'Wrong Hash Password'
+        'Wrong Hash Password Because You Comfirm PassWord Wrong 4 times in a row'
       ]
     });
     return;

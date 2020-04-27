@@ -5,29 +5,6 @@ const saltRounds = 10;
 
 
 module.exports.index = function(req, res) {
-  console.log(1);
-  const sgMail = require('@sendgrid/mail');
-
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-  // console.log(process.env.SENDGRID_API_KEY);
-  const msg = {
-    to: 'nnhungjs@gmail.com',
-    from: 'nghiahunguet@gmail.com',
-    subject: 'Sending with Twilio SendGrid is Fun',
-    text: 'Hey Bro!!!!!!!!!!!!!',
-    html: '<strong>Hey Brooooooooooooooo </strong>',
-  };
-  sgMail
-    .send(msg)
-    .then((res) => {
-      console.log(res);
-    }, error => {
-      console.error(error);
-
-      if (error.response) {
-        console.error(error.response.body)
-      }
-    });
   res.render('user/index');
 };
 
@@ -56,7 +33,8 @@ bcrypt.hash(password, saltRounds, function(err, hash) {
     var newUser = {
     id: id,
     email: email,
-    password: hash
+    password: hash,
+    wrongLoginCount: 0
   };
   db.get('users').push(newUser).write();
 });
