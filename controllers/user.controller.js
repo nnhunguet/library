@@ -34,7 +34,8 @@ bcrypt.hash(password, saltRounds, function(err, hash) {
     id: id,
     email: email,
     password: hash,
-    wrongLoginCount: 0
+    wrongLoginCount: 0,
+    avatar: ''
   };
   db.get('users').push(newUser).write();
 });
