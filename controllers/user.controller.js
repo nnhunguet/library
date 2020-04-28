@@ -87,6 +87,7 @@ module.exports.postAvatar = function(req, res) {
     }
   });
   
+  console.log(req.body);
   
 }
 
