@@ -56,8 +56,8 @@ module.exports.profile = function(req, res) {
   });
 };
 
-module.exports.postUpdate = function(req, res) {
-  console.log(req);
-}
+// module.exports.postUpdate = function(req, res) {
+//   console.log(req);
+// }
 
 
