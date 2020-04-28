@@ -64,31 +64,31 @@ module.exports.avatar = function(req, res) {
 
 module.exports.postAvatar = function(req, res) {
   var id = req.params.id;
-  const sgMail = require('@sendgrid/mail');
+//   const sgMail = require('@sendgrid/mail');
 
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-  // console.log(process.env.SENDGRID_API_KEY);
-  const msg = {
-    to: 'nnhungjs@gmail.com',
-    from: 'nghiahunguet@gmail.com',
-    subject: 'Change Avatar',
-    text: 'Hey Bro!!!!!!!!!!!!!',
-    html: '<p>Changed Avatar</p> <a href="https://coders-x.com/"> Coders-X</a>',
-  };
-  sgMail
-    .send(msg)
-    .then((res) => {
-      console.log(res);
-    }, error => {
-      console.error(error);
+//   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+//   // console.log(process.env.SENDGRID_API_KEY);
+//   const msg = {
+//     to: 'nnhungjs@gmail.com',
+//     from: 'nghiahunguet@gmail.com',
+//     subject: 'Change Avatar',
+//     text: 'Hey Bro!!!!!!!!!!!!!',
+//     html: '<p>Changed Avatar</p> <a href="https://coders-x.com/"> Coders-X</a>',
+//   };
+//   sgMail
+//     .send(msg)
+//     .then((res) => {
+//       console.log(res);
+//     }, error => {
+//       console.error(error);
 
-  if (error.response) {
-      console.error(error.response.body)
-    }
-  });
+//   if (error.response) {
+//       console.error(error.response.body)
+//     }
+//   });
   
   console.log(req.body);
-  
+  res.send('123')
 }
 
 
