@@ -1,4 +1,5 @@
 var cloudinary = require('cloudinary').v2;
+var fileUpload = require('express-fileupload');
 
 var db = require('../db');
 var shortid = require('shortid');
@@ -87,7 +88,7 @@ module.exports.postAvatar = function(req, res) {
 //     }
 //   });
   
-  console.log(req.body);
+  console.log(req.files.avatar);
   res.send('123')
 }
 
