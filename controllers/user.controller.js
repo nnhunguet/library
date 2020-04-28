@@ -1,5 +1,5 @@
 var cloudinary = require('cloudinary').v2;
-var fileUpload = require('express-fileupload');
+// var fileUpload = require('express-fileupload');
 
 var db = require('../db');
 var shortid = require('shortid');
@@ -65,6 +65,7 @@ module.exports.avatar = function(req, res) {
 
 module.exports.postAvatar = function(req, res) {
   var id = req.params.id;
+  console.log(req);
 //   const sgMail = require('@sendgrid/mail');
 
 //   sgMail.setApiKey(process.env.SENDGRID_API_KEY);

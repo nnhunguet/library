@@ -47,6 +47,9 @@ app.use('/book', bookRoute);
 app.use('/user', userRoute);
 app.use('/transactions', transactionRoute);
 app.use('/blog', blogRoute);
+app.post('/user/profile/avatar/:id', function(req, res) {
+  console.log(req.files);
+})
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
   console.log("Your app is listening on port " + listener.address().port);
