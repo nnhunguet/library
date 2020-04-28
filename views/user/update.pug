@@ -10,7 +10,8 @@ block content
     tr 
       td
         img(src=user.avatar)
+        form(action='/user/update'+user.id method='POST')
+          input(type='file')
       td 
         p=user.email
-        
   
