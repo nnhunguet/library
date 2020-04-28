@@ -1,3 +1,8 @@
+var db = require('../db');
+
 module.exports.index = function(req, res) {
-  res.render('blog/index');
+  var blogs = db.get('blogs').value();
+  res.render('blog/index', {
+    blogs: blogs
+  });
 }
