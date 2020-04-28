@@ -10,7 +10,7 @@ block content
     tr 
       td
         img(src=user.avatar)
-        a(href='/user/profile/update')  
+        a(href='/user/profile/avatar/'+user.id)  
           button.btn.btn-outline-primary Change Avatar
       td 
         p=user.email

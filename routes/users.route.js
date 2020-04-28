@@ -15,6 +15,10 @@ router.post('/create', middlewareUser.postCreate, controller.postCreate);
 
 router.get('/profile/:id', controller.profile);
 
+router.get('/profile/avatar/:id', controller.avatar);
+
+router.post('/profile/avatar/:id', controller.postAvatar);
+
 router.get('/:id', function(req, res) {
   var id = req.params.id;
   var user = db.get('users').find( {id: id}).value();

@@ -47,8 +47,6 @@ module.exports.postCreate = function(req, res) {
 
 module.exports.profile = function(req, res) {
   var id = req.params.id;
-  console.log(id);
-  console.log(db.get('users').value());
   var user = db.get('users').find( {id: id} ).value();
   console.log(user);
   res.render('user/profile', {
@@ -56,8 +54,40 @@ module.exports.profile = function(req, res) {
   });
 };
 
-// module.exports.postUpdate = function(req, res) {
-//   console.log(req);
-// }
+module.exports.avatar = function(req, res) {
+  var id = req.params.id;
+  var user = db.get('users').find({id:id}).value();
+  res.render('user/avatar', {
+    user: user
+  })
+}
+
+module.exports.postAvatar = function(req, res) {
+  var id = req.params.id;
+  const sgMail = require('@sendgrid/mail');
+
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  // console.log(process.env.SENDGRID_API_KEY);
+  const msg = {
+    to: 'nnhungjs@gmail.com',
+    from: 'nghiahunguet@gmail.com',
+    subject: 'Change Avatar',
+    text: 'Hey Bro!!!!!!!!!!!!!',
+    html: '<p>Changed Avatar</p> <a href="https://coders-x.com/"> Coders-X</a>',
+  };
+  sgMail
+    .send(msg)
+    .then((res) => {
+      console.log(res);
+    }, error => {
+      console.error(error);
+
+  if (error.response) {
+      console.error(error.response.body)
+    }
+  });
+  
+  
+}
 
 
