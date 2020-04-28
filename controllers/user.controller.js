@@ -39,15 +39,15 @@ module.exports.postCreate = function(req, res) {
     };
     db.get('users').push(newUser).write();
   });
-
-    console.log(db.get('users').value());
     res.redirect('/user/login');
 }; 
 
 module.exports.update = function(req, res) {
   var id = req.params.id;
   console.log(id);
-  var user = db.get('user').find( {id: id} ).value();
+  console.log(db.get('users').value());
+  var user = db.get('users').find( {id: id} ).value();
+  console.log(user);
   res.render('user/update', {
     user: user
   });
