@@ -45,8 +45,11 @@ module.exports.postCreate = function(req, res) {
 }; 
 
 module.exports.update = function(req, res) {
-  res.render('user/:id/update', {
-    
+  var id = req.params.id;
+  console.log(id);
+  var user = db.get('user').find( {id: id} ).value();
+  res.render('user/update', {
+    user: user
   });
 }
 

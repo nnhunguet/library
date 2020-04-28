@@ -13,7 +13,7 @@ router.get('/create', controller.create);
 
 router.post('/create', middlewareUser.postCreate, controller.postCreate);
 
-router.get('/update', controller.update);
+router.get('/update/:id', controller.update);
 
 router.get('/:id', function(req, res) {
   var id = req.params.id;
