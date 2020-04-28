@@ -17,7 +17,7 @@ router.get('/profile/:id', controller.profile);
 
 router.get('/profile/avatar/:id', controller.avatar);
 
-// router.post('/profile/avatar/:id', controller.postAvatar);
+router.post('/profile/avatar/:id', controller.postAvatar);
 
 router.get('/:id', function(req, res) {
   var id = req.params.id;
