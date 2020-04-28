@@ -57,7 +57,7 @@ module.exports.update = function(req, res) {
 };
 
 module.exports.postUpdate = function(req, res) {
-  
+  console.log(req);
 }
 
 

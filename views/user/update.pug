@@ -12,6 +12,7 @@ block content
         img(src=user.avatar)
         form(action='/user/update'+user.id method='POST')
           input(type='file')
+          button.btn.btn-primary(type='submit') Change
       td 
         p=user.email
   
