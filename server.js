@@ -29,7 +29,9 @@ var cookieParser = require('cookie-parser')
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 app.use(express.static('public'));
-app.use(fileUpload());
+app.use(fileUpload({
+  useTempFiles: true
+}));
 
 app.use(cookieParser(process.env.SECRET_COOKIES));
 // our default array of dreams

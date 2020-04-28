@@ -65,7 +65,6 @@ module.exports.avatar = function(req, res) {
 
 module.exports.postAvatar = function(req, res) {
   var id = req.params.id;
-  console.log(req);
 //   const sgMail = require('@sendgrid/mail');
 
 //   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -88,8 +87,14 @@ module.exports.postAvatar = function(req, res) {
 //       console.error(error.response.body)
 //     }
 //   });
-  
+  var file = req.files.avatar;
   console.log(req.files.avatar);
+  
+  cloudinary.v2.uploader.upload(file.tempFilePath, 
+    function(error, result) {
+    console.log('Result:', result);
+    console.log('Error:', error);
+    });
   res.send('123')
 }
 
