@@ -71,7 +71,7 @@ bcrypt.compare(password, user.password, function(err, result) {
       res.cookie('userId', user.id, {
         signed: true
       });
-      res.redirect('/transactions');
+      res.redirect('/user/:'+ user.id +'/update');
         }
       });
   if(!result) {

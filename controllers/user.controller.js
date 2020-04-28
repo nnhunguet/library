@@ -27,20 +27,27 @@ module.exports.postCreate = function(req, res) {
     return;
   }
   
-bcrypt.hash(password, saltRounds, function(err, hash) {
-    // Store hash in your password DB.
-  var hash = hash;
-    var newUser = {
-    id: id,
-    email: email,
-    password: hash,
-    wrongLoginCount: 0,
-    avatar: ''
-  };
-  db.get('users').push(newUser).write();
-});
-  
-  console.log(db.get('users').value());
-  res.redirect('/user/login');
+  bcrypt.hash(password, saltRounds, function(err, hash) {
+      // Store hash in your password DB.
+    var hash = hash;
+      var newUser = {
+      id: id,
+      email: email,
+      password: hash,
+      wrongLoginCount: 0,
+      avatar: 'https://api.adorable.io/avatars/285/abott@adorable.png'
+    };
+    db.get('users').push(newUser).write();
+  });
+
+    console.log(db.get('users').value());
+    res.redirect('/user/login');
 }; 
+
+module.exports.update = function(req, res) {
+  res.render('user/:id/update', {
+    
+  });
+}
+
 
