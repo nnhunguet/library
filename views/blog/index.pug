@@ -9,3 +9,17 @@ block content
         .media-body 
           h5.mt-0.mb-1=blog.title
           p=blog.desc
+  nav(aria-label='...')
+    ul.pagination
+      li.page-item.disabled
+        span.page-link Previous
+      li.page-item
+        a.page-link(href='/blog?page=') 1
+      li.page-item.active(aria-current='page')
+        span.page-link
+          | 2
+          span.sr-only (current)
+      li.page-item
+        a.page-link(href='#') 3
+      li.page-item
+        a.page-link(href='#') Next
