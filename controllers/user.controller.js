@@ -45,13 +45,13 @@ module.exports.postCreate = function(req, res) {
     res.redirect('/user/login');
 }; 
 
-module.exports.update = function(req, res) {
+module.exports.profile = function(req, res) {
   var id = req.params.id;
   console.log(id);
   console.log(db.get('users').value());
   var user = db.get('users').find( {id: id} ).value();
   console.log(user);
-  res.render('user/update', {
+  res.render('user/profile', {
     user: user
   });
 };
