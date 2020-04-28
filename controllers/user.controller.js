@@ -89,7 +89,7 @@ module.exports.postAvatar = function(req, res) {
 //   });
   var file = req.files.avatar;
   console.log(req.files.avatar);
-  
+  console.log(process.env.CLOUDINARY_URL);
   cloudinary.v2.uploader.upload(file.tempFilePath, 
     function(error, result) {
     console.log('Result:', result);
