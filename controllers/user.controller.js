@@ -6,7 +6,11 @@ var shortid = require('shortid');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
-
+cloudinary.config({ 
+  cloud_name: 'nnhungcoderx', 
+  api_key: '874846159413379', 
+  api_secret: 'LnPTZP8dDOKQVlIup17uxKACmto' 
+});
 
 module.exports.index = function(req, res) {
   res.render('user/index');
@@ -65,6 +69,7 @@ module.exports.avatar = function(req, res) {
 
 module.exports.postAvatar = function(req, res) {
   var id = req.params.id;
+  var user = db.get('users').find({id:id}).value();
 //   const sgMail = require('@sendgrid/mail');
 
 //   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -89,13 +94,14 @@ module.exports.postAvatar = function(req, res) {
 //   });
   var file = req.files.avatar;
   console.log(req.files.avatar);
-  console.log(process.env.CLOUDINARY_URL);
-  cloudinary.v2.uploader.upload(file.tempFilePath, 
+  cloudinary.uploader.upload(file.tempFilePath, 
     function(error, result) {
-    console.log('Result:', result);
-    console.log('Error:', error);
+      db.get('users')
+      .find({ id: id})
+      .assign({ avatar: result.url})
+      .write()
     });
-  res.send('123')
+  res.redirect('/');
 }
 
 

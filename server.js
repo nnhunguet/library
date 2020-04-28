@@ -5,6 +5,7 @@
 // but feel free to use whatever libraries or frameworks you'd like through `package.json`.
 const express = require("express");
 var fileUpload = require('express-fileupload');
+var cloudinary = require('cloudinary').v2;
 const app = express();
 
 
@@ -32,6 +33,12 @@ app.use(express.static('public'));
 app.use(fileUpload({
   useTempFiles: true
 }));
+
+cloudinary.config({ 
+  cloud_name: 'nnhungcoderx', 
+  api_key: '874846159413379', 
+  api_secret: 'LnPTZP8dDOKQVlIup17uxKACmto' 
+});
 
 app.use(cookieParser(process.env.SECRET_COOKIES));
 // our default array of dreams
