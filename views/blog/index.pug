@@ -11,15 +11,14 @@ block content
           p=blog.desc
   nav(aria-label='...')
     ul.pagination
-      li.page-item.disabled
-        span.page-link Previous
       li.page-item
-        a.page-link(href='/blog?page=') 1
+        a.page-link(href='/blog?page='+ (page-1)) Previous
+      li.page-item
+        a.page-link(href='/blog?page=' + (page-1))=page-1
       li.page-item.active(aria-current='page')
-        span.page-link
-          | 2
+        span.page-link=page
           span.sr-only (current)
       li.page-item
-        a.page-link(href='#') 3
+        a.page-link(href='/blog?page=' + (page+1))=page+1
       li.page-item
-        a.page-link(href='#') Next
+        a.page-link(href='/blog?page='+(page+1)) Next
