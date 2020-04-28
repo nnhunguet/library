@@ -1,7 +1,10 @@
+var cloudinary = require('cloudinary').v2;
+
 var db = require('../db');
 var shortid = require('shortid');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
+
 
 
 module.exports.index = function(req, res) {
@@ -51,6 +54,10 @@ module.exports.update = function(req, res) {
   res.render('user/update', {
     user: user
   });
+};
+
+module.exports.postUpdate = function(req, res) {
+  
 }
 
 

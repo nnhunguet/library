@@ -9,7 +9,7 @@ const sgMail = require('@sendgrid/mail');
 var db = require('./db.js');
 var shortid = require('shortid');
 
-app.set('view engine', 'pug')
+app.set('view engine', 'pug');
 
 var bookRoute = require('./routes/books.route');
 var userRoute = require('./routes/users.route');
