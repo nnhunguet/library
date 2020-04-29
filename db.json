@@ -1,24 +1,5 @@
 {
-  "books": [
-    {
-      "id": "KbolXVMA5",
-      "title": "Thế Giới Phẳng",
-      "desc": "The World Flat",
-      "image": "http://res.cloudinary.com/nnhungcoderx/image/upload/v1588141038/krsbhq3nvj5zorrjuntl.jpg"
-    },
-    {
-      "id": "4t2wD3U_r",
-      "title": "Đắc Nhân Tâm",
-      "desc": "Sách hay lắm nhưng chưa đọc :))",
-      "image": "http://res.cloudinary.com/nnhungcoderx/image/upload/v1588141063/ynzrziytallo1mgfqc7l.jpg"
-    },
-    {
-      "id": "qz19vpiX_",
-      "title": "Nhà Giả Kim",
-      "desc": "Sách viết về hành trình của nhà giả kim",
-      "image": "http://res.cloudinary.com/nnhungcoderx/image/upload/v1588141080/nfghb848mjyzcalbhrhd.jpg"
-    }
-  ],
+  "books": [],
   "users": [
     {
       "id": "c5PCp3ifN",
@@ -48,7 +29,35 @@
       "isComplete": false
     }
   ],
-  "sessions": [],
+  "sessions": [
+    {
+      "id": "a8DR2R-dM"
+    },
+    {
+      "id": "7jnFEobfl"
+    },
+    {
+      "id": "DGD9OcVTF"
+    },
+    {
+      "id": "KX9KWq9Ju"
+    },
+    {
+      "id": "SZNlwfXhp"
+    },
+    {
+      "id": "D5MH1P-3A"
+    },
+    {
+      "id": "jcNBT439i"
+    },
+    {
+      "id": "G2UwjPVM0"
+    },
+    {
+      "id": "XZFGi_hFU"
+    }
+  ],
   "blogs": [
     {
       "title": "redefine virtual channels",
