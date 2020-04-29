@@ -13,8 +13,9 @@ block content
     each book in books
       .col-4.mb-4
         .card
-          img.card-img-top(src=book.image, width='50px' height='300px')
+          img.card-img-top(src=book.image, width='50px' height='100%')
           .card-body
             h5.card-title=book.title
             p.card-text=book.desc
-            a(href='/boo')
+            a(href='/book/cart/'+book.id) 
+              .btn.btn-primary Add to cart

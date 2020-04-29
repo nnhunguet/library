@@ -1,5 +1,12 @@
 {
-  "books": [],
+  "books": [
+    {
+      "id": "FfLWqkDAm",
+      "title": "Thế Giới Phẳng",
+      "desc": "The World Flat",
+      "image": "http://res.cloudinary.com/nnhungcoderx/image/upload/v1588129574/mkkkdwykey8z0he2fpd9.jpg"
+    }
+  ],
   "users": [
     {
       "id": "c5PCp3ifN",

@@ -56,8 +56,8 @@ module.exports.create = function(req, res) {
   var title = req.body.title;
   var desc = req.body.desc;
   var id = shortid.generate();
-  var file = req.files.avatar;
-  console.log(req.files.avatar);
+  var file = req.files.coverUrl;
+  console.log(req.files.coverUrl);
   cloudinary.uploader.upload(file.tempFilePath, 
     function(error, result) {
       var newBook = {
