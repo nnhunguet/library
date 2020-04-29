@@ -24,8 +24,8 @@
       "id": "bIxsl6LjU",
       "email": "nnhungjs@gmail.com",
       "password": "$2b$10$i5/i4OXY0hy4xvFfBhblXuZCyf4731q9AgktbbUN8n/nzF9xmi0ui",
-      "wrongLoginCount": 0,
-      "avatar": "https://api.adorable.io/avatars/285/abott@adorable.png"
+      "wrongLoginCount": 1,
+      "avatar": "http://res.cloudinary.com/nnhungcoderx/image/upload/v1588145289/l33ghesqrnvxv60rl5eh.jpg"
     }
   ],
   "sessions": [
@@ -100,6 +100,36 @@
     },
     {
       "id": "gys0g_XQz"
+    },
+    {
+      "id": "c2bD1yCXV"
+    },
+    {
+      "id": "rZjNNA6P4"
+    },
+    {
+      "id": "r6ILLAjTP"
+    },
+    {
+      "id": "JztTEbWMW"
+    },
+    {
+      "id": "UqSE7hGsV"
+    },
+    {
+      "id": "qHX9twGJ3"
+    },
+    {
+      "id": "Rif3SRyD7"
+    },
+    {
+      "id": "Cjq4ujOSn"
+    },
+    {
+      "id": "obOOucCmt"
+    },
+    {
+      "id": "mioUcT5vj"
     }
   ],
   "blogs": [
