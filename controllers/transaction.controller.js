@@ -2,6 +2,7 @@ var db = require('../db');
 var shortid = require('shortid');
 
 module.exports.index = function(req, res) {
+  console.log(db.get('users').value());
   var isAdmin;
   var id = req.signedCookies.userId;
   if(db.get('users').find({id:id}).value().isAdmin) {
