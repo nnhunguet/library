@@ -1,77 +1,12 @@
 {
   "books": [],
-  "users": [
-    {
-      "id": "UHdPsUoeY",
-      "email": "nnhungjs@gmail.com",
-      "password": "$2b$10$ughu6c7Isr7TeCPGkC6/cOJJ3IR9zYJpUPBJNh.8E8dE4NPwXcdha",
-      "wrongLoginCount": 0,
-      "avatar": "https://api.adorable.io/avatars/285/abott@adorable.png"
-    }
-  ],
+  "users": [],
   "sessions": [
     {
-      "id": "HePT2KwTd"
+      "id": "hLMAFI1ZF"
     },
     {
-      "id": "Yo1MyyG6A"
-    },
-    {
-      "id": "jO6_x1q3X"
-    },
-    {
-      "id": "F3vGExYqU"
-    },
-    {
-      "id": "8sd7ZQspU"
-    },
-    {
-      "id": "qcO0fp2_d"
-    },
-    {
-      "id": "OFwzYVTqs"
-    },
-    {
-      "id": "RwllQbQuP"
-    },
-    {
-      "id": "6DwuVg5V5"
-    },
-    {
-      "id": "cyqsVrNCR"
-    },
-    {
-      "id": "f8BacoJKF"
-    },
-    {
-      "id": "lBACxC9Wn"
-    },
-    {
-      "id": "4hlhFPTYr"
-    },
-    {
-      "id": "bU0lojFST"
-    },
-    {
-      "id": "E-Ktt5aqs"
-    },
-    {
-      "id": "is_wPYXUy"
-    },
-    {
-      "id": "VTagN1gA0"
-    },
-    {
-      "id": "BkkwKWGfP"
-    },
-    {
-      "id": "on5CGfoS_"
-    },
-    {
-      "id": "3ITCfTOe4"
-    },
-    {
-      "id": "ywB2lj7E3"
+      "id": "ydZfTwGBA"
     }
   ],
   "transactions": [],
