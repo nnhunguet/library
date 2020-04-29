@@ -1,137 +1,15 @@
 {
-  "books": [
-    {
-      "id": "tSbZGnTZd",
-      "title": "Thế Giới Phẳng",
-      "desc": "The World Flat",
-      "image": "http://res.cloudinary.com/nnhungcoderx/image/upload/v1588144825/wdrckmqj8anrphg0nguz.jpg"
-    },
-    {
-      "id": "5-dVYQ3zo",
-      "title": "Đắc Nhân Tâm",
-      "desc": "Sách hay lắm nhưng chưa đọc :))",
-      "image": "http://res.cloudinary.com/nnhungcoderx/image/upload/v1588144837/vpbuorqoil34cfqwgojl.jpg"
-    },
-    {
-      "id": "uqqaoupxu",
-      "title": "Nhà Giả Kim",
-      "desc": "Sách hay lắm nhưng chưa đọc :))",
-      "image": "http://res.cloudinary.com/nnhungcoderx/image/upload/v1588144896/nq2oqoukkhkpktx2hmhn.jpg"
-    }
-  ],
-  "users": [
-    {
-      "id": "bIxsl6LjU",
-      "email": "nnhungjs@gmail.com",
-      "password": "$2b$10$i5/i4OXY0hy4xvFfBhblXuZCyf4731q9AgktbbUN8n/nzF9xmi0ui",
-      "wrongLoginCount": 1,
-      "avatar": "http://res.cloudinary.com/nnhungcoderx/image/upload/v1588145289/l33ghesqrnvxv60rl5eh.jpg"
-    }
-  ],
+  "books": [],
+  "users": [],
   "sessions": [
     {
-      "id": "rVs5giu65"
+      "id": "HePT2KwTd"
     },
     {
-      "id": "ad0YycFZ6"
-    },
-    {
-      "id": "t9Vorze0r"
-    },
-    {
-      "id": "2F2UnDCz7"
-    },
-    {
-      "id": "pkowfSnvE"
-    },
-    {
-      "id": "1obld5NrK"
-    },
-    {
-      "id": "z5YsvMyOHd"
-    },
-    {
-      "id": "uvdrcd_hp"
-    },
-    {
-      "id": "huggKaTH-"
-    },
-    {
-      "id": "ReUUm79p1"
-    },
-    {
-      "id": "qcByEXHEq"
-    },
-    {
-      "id": "U4gsYyoo3"
-    },
-    {
-      "id": "AYbD8dMdl"
-    },
-    {
-      "id": "sGgWZSPVL"
-    },
-    {
-      "id": "sZ4uGHTSZ"
-    },
-    {
-      "id": "dPESSIjsZ"
-    },
-    {
-      "id": "-p5-DW5SG"
-    },
-    {
-      "id": "1X4aD77Ft"
-    },
-    {
-      "id": "mjyONUfcC"
-    },
-    {
-      "id": "bEkNvXIDi"
-    },
-    {
-      "id": "7LHuPrlKX"
-    },
-    {
-      "id": "xk8JQ72Xp"
-    },
-    {
-      "id": "kf_E-cL3a"
-    },
-    {
-      "id": "gys0g_XQz"
-    },
-    {
-      "id": "c2bD1yCXV"
-    },
-    {
-      "id": "rZjNNA6P4"
-    },
-    {
-      "id": "r6ILLAjTP"
-    },
-    {
-      "id": "JztTEbWMW"
-    },
-    {
-      "id": "UqSE7hGsV"
-    },
-    {
-      "id": "qHX9twGJ3"
-    },
-    {
-      "id": "Rif3SRyD7"
-    },
-    {
-      "id": "Cjq4ujOSn"
-    },
-    {
-      "id": "obOOucCmt"
-    },
-    {
-      "id": "mioUcT5vj"
+      "id": "Yo1MyyG6A"
     }
   ],
+  "transactions": [],
   "blogs": [
     {
       "title": "redefine virtual channels",
