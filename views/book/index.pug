@@ -9,11 +9,12 @@ block content
   form(method="GET" action="/book/create").form-inline
     .form-group
     button(type="submit").btn.btn-outline-success Create Book
-  .card-deck
-    each book in books 
-      .card(style='width: 18rem;').col-4
-        img.card-img-top(src=book.image)
-        .card-body
-          h5.card-title=book.title
-          p.card-text=book.desc
-          a.btn.btn-primary(href='#') Add To Cart
+  .row.row-cols-1.row-cols-md-3
+    each book in books
+      .col-4.mb-4
+        .card
+          img.card-img-top(src=book.image, width='50px' height='300px')
+          .card-body
+            h5.card-title=book.title
+            p.card-text=book.desc
+            a(href='/boo')
