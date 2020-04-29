@@ -49,7 +49,6 @@ app.use(sessionMiddleware);
 app.get('/', function(req, res) {
   // res.cookie('cookie', shortid.generate());
   // res.locals.countCookie = 0;
-  console.log(db.get('users').value());
   res.render('index');
 })
 app.use('', authRoute);
