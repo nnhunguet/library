@@ -57,7 +57,7 @@ app.use('/book', bookRoute);
 app.use('/user', userRoute);
 app.use('/transactions', transactionRoute);
 app.use('/blog', blogRoute);
-app.use('', cartRoute);
+app.use('/cart', cartRoute);
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
