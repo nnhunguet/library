@@ -1,3 +1,11 @@
+var cloudinary = require('cloudinary').v2;
+
+cloudinary.config({ 
+  cloud_name: 'nnhungcoderx', 
+  api_key: '874846159413379', 
+  api_secret: 'LnPTZP8dDOKQVlIup17uxKACmto' 
+});
+
 var db = require('../db');
 var shortid = require('shortid');
 
@@ -48,13 +56,18 @@ module.exports.create = function(req, res) {
   var title = req.body.title;
   var desc = req.body.desc;
   var id = shortid.generate();
-  var newBook = {
-    id: id,
-    title: title,
-    description: desc 
-  };
-  db.get('books').push(newBook).write();
-  console.log(db.get('books').value())
+  var file = req.files.avatar;
+  console.log(req.files.avatar);
+  cloudinary.uploader.upload(file.tempFilePath, 
+    function(error, result) {
+      var newBook = {
+        id: id,
+        title: title,
+        desc: desc,
+        image: result.url
+      };
+      db.get('books').push(newBook).write();
+  });
   res.redirect('/book');
 };
 
