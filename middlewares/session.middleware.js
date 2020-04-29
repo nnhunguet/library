@@ -11,7 +11,7 @@ module.exports = function(req, res, next) {
         signed: true
       });
     db.get('sessions').push({id: sessionId}).write();
-    console.log(db.get('sessions').value());
+    // console.log(db.get('sessions').value());
   }
   
   next();
