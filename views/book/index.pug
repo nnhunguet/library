@@ -6,14 +6,14 @@ block content
     .form-group.mr-2
       input.form-control(type="text" name="q" id='title' placeholder='Search Book' value=value ? value : '')
     button(type="submit").btn.btn-outline-primary Search
-  .row
+  form(method="GET" action="/book/create").form-inline
+    .form-group
+    button(type="submit").btn.btn-outline-success Create Book
+  .card-deck
     each book in books 
-      .card(style='width: 18rem;').col-3
+      .card(style='width: 18rem;').col-4
         img.card-img-top(src=book.image)
         .card-body
           h5.card-title=book.title
           p.card-text=book.desc
           a.btn.btn-primary(href='#') Add To Cart
-  form(method="GET" action="/book/create").form-inline
-    .form-group
-    button(type="submit").btn.btn-outline-success Create Book
