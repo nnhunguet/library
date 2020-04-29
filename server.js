@@ -21,6 +21,7 @@ var userRoute = require('./routes/users.route');
 var authRoute = require('./routes/auth.route')
 var transactionRoute = require('./routes/transactions.route');
 var blogRoute = require('./routes/blog.route');
+var cartRoute = require('./routes/cart.route');
 
 var sessionMiddleware = require('./middlewares/session.middleware');
 // var middlewareCookie = require('./middlewares/cookie.middleware');
@@ -56,6 +57,7 @@ app.use('/book', bookRoute);
 app.use('/user', userRoute);
 app.use('/transactions', transactionRoute);
 app.use('/blog', blogRoute);
+app.use('', cartRoute);
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {

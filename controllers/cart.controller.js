@@ -1,4 +1,5 @@
-module.exports.cart = function(req, res) {
-  var idBook = req.params.session;
-  
+module.exports.addToCart = function(req, res) {
+  var idBook = req.params.bookId;
+  console.log(idBook);
+  res.send(1);
 }
