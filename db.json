@@ -1,24 +1,5 @@
 {
-  "books": [
-    {
-      "id": "FfLWqkDAm",
-      "title": "Thế Giới Phẳng",
-      "desc": "The World Flat",
-      "image": "http://res.cloudinary.com/nnhungcoderx/image/upload/v1588129574/mkkkdwykey8z0he2fpd9.jpg"
-    },
-    {
-      "id": "sAxslH03T",
-      "title": "Đắc Nhân Tâm",
-      "desc": "Sách hay lắm nhưng chưa đọc :))",
-      "image": "http://res.cloudinary.com/nnhungcoderx/image/upload/v1588130401/mahc31u0vaqrxn37czl0.jpg"
-    },
-    {
-      "id": "g87e3kko_",
-      "title": "Nhà Giả Kim",
-      "desc": "Sách viết về hành trình của nhà giả kim",
-      "image": "http://res.cloudinary.com/nnhungcoderx/image/upload/v1588130577/i6rvx4fbdttvz2nwgmkc.jpg"
-    }
-  ],
+  "books": [],
   "users": [
     {
       "id": "c5PCp3ifN",
@@ -48,6 +29,7 @@
       "isComplete": false
     }
   ],
+  "sessions": [],
   "blogs": [
     {
       "title": "redefine virtual channels",
