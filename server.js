@@ -15,12 +15,14 @@ var shortid = require('shortid');
 
 app.set('view engine', 'pug');
 
+
 var bookRoute = require('./routes/books.route');
 var userRoute = require('./routes/users.route');
 var authRoute = require('./routes/auth.route')
 var transactionRoute = require('./routes/transactions.route');
 var blogRoute = require('./routes/blog.route');
 
+var sessionMiddleware = require('./middlewares/session.middleware');
 // var middlewareCookie = require('./middlewares/cookie.middleware');
 // var authMiddleware = require('./middlewares/auth.middleware');
 
@@ -41,6 +43,7 @@ cloudinary.config({
 });
 
 app.use(cookieParser(process.env.SECRET_COOKIES));
+app.use(sessionMiddleware);
 // our default array of dreams
 
 app.get('/', function(req, res) {
