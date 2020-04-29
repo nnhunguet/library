@@ -1,15 +1,169 @@
 {
-  "books": [],
-  "users": [],
+  "books": [
+    {
+      "id": "6PbH0wYGg",
+      "title": "Thế Giới Phẳng",
+      "desc": "The World Flat",
+      "image": "http://res.cloudinary.com/nnhungcoderx/image/upload/v1588150581/gdyutnpc1fnicpdynovi.jpg"
+    },
+    {
+      "id": "VyQTnF8xi",
+      "title": "Đắc Nhân Tâm",
+      "desc": "Sách hay lắm nhưng chưa đọc :))",
+      "image": "http://res.cloudinary.com/nnhungcoderx/image/upload/v1588150601/rknkmrwzii5iad8ivoqu.jpg"
+    },
+    {
+      "id": "FKORwSwwB",
+      "title": "Nhà Giả Kim",
+      "desc": "Sách viết về hành trình của nhà giả kim",
+      "image": "http://res.cloudinary.com/nnhungcoderx/image/upload/v1588150618/gszwcyxzznqjtjw6t64y.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": "0kJVqpRpz",
+      "email": "nnhungjs@gmail.com",
+      "password": "$2b$10$XmxLALKl688gUtkVB440T.bSw2vT.BjXdcY050A7tDATnjISj1Ej2",
+      "wrongLoginCount": 0,
+      "avatar": "http://res.cloudinary.com/nnhungcoderx/image/upload/v1588150356/akjloumvq7pbebwikd2z.jpg"
+    }
+  ],
   "sessions": [
     {
       "id": "hLMAFI1ZF"
     },
     {
       "id": "ydZfTwGBA"
+    },
+    {
+      "id": "4E3Dji16y"
+    },
+    {
+      "id": "jgi55uqLJ"
+    },
+    {
+      "id": "f2vJlJgkh"
+    },
+    {
+      "id": "KBF3PHh4k"
+    },
+    {
+      "id": "LhxVPCLQd"
+    },
+    {
+      "id": "sBWPqGOLT"
+    },
+    {
+      "id": "CtA0mZ6Gw"
+    },
+    {
+      "id": "M2S6TNAoL"
+    },
+    {
+      "id": "VHV3K5ITK"
+    },
+    {
+      "id": "8zsnRUf1f"
+    },
+    {
+      "id": "4mWHVefR7"
+    },
+    {
+      "id": "LeK_z3Mhy"
+    },
+    {
+      "id": "CchipO3SG"
+    },
+    {
+      "id": "Q9mqgqeV-"
+    },
+    {
+      "id": "Tz4BhDzWa"
+    },
+    {
+      "id": "nz5yUaPYi"
+    },
+    {
+      "id": "A73aq8vpb"
+    },
+    {
+      "id": "eWbI9EQsn"
+    },
+    {
+      "id": "_1brGBGff"
+    },
+    {
+      "id": "nedHWOeIJ"
+    },
+    {
+      "id": "F4sFKbfiD"
+    },
+    {
+      "id": "dCYr8G864"
+    },
+    {
+      "id": "m3OmAOYKl"
+    },
+    {
+      "id": "poe0WZ4uC"
+    },
+    {
+      "id": "dWM4VCxsT"
+    },
+    {
+      "id": "s_qqhDqXm"
+    },
+    {
+      "id": "DfRQFrlIh"
+    },
+    {
+      "id": "-yfTjvvA_"
+    },
+    {
+      "id": "SHN5w3JSy"
+    },
+    {
+      "id": "_FtVC63FS"
+    },
+    {
+      "id": "TM7_ciWUM"
+    },
+    {
+      "id": "pw-k27Vs6"
+    },
+    {
+      "id": "HvOh1IxOc"
+    },
+    {
+      "id": "B-9VseKoO"
+    },
+    {
+      "id": "5ibVNepzM"
+    },
+    {
+      "id": "czlNgZqiu"
+    },
+    {
+      "id": "6p5aGfTT3"
+    },
+    {
+      "id": "Vl9aUSxEF"
+    },
+    {
+      "id": "GLHHqc3fT"
+    },
+    {
+      "id": "1doU7sJNz"
     }
   ],
-  "transactions": [],
+  "transactions": [
+    {
+      "id": "NUMKecEPp",
+      "userId": "0kJVqpRpz",
+      "bookId": "6PbH0wYGg",
+      "isComplete": false
+    }
+  ],
   "blogs": [
     {
       "title": "redefine virtual channels",
