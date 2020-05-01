@@ -13,6 +13,15 @@ module.exports = function(req, res, next) {
     db.get('sessions').push({id: sessionId}).write();
     // console.log(db.get('sessions').value());
   }
+
+  var cart = db.get('sessions').find({id: req.signedCookies.sessionId}).value().cart;
+  console.log(cart);
+  var count = 0;
+  for(var key in cart) {
+    count += cart[key] 
+  }
+  
+  res.locals.count = count ;
   
   next();
   
