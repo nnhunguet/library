@@ -49,9 +49,11 @@ module.exports.post = function(req, res) {
     db.get('transactions').push(newTransaction).write();
   }
   
-  db.unset(')
+  db.get('sessions')
+  .find({id: sessionId })
+  .assign({ cart: {} })
   .write()
-  
+  console.log(db.get('sessions').find({id: sessionId}).value());
   res.redirect('/');
 }
 
