@@ -5,13 +5,20 @@ module.exports.index = function(req, res) {
   var cart = db.get('sessions').find({id: sessionId}).value().cart;
   console.log(cart);
   var carts = [];
-  for(var key of cart) {
+  for(var key in cart) {
     carts.push(
-      { db.get('books').find({id: key}),
-      
+      { 
+        book: db.get('books').find({id: key}).value(),
+        count: cart[key]   
+      }
+    )
   }
   
-  res.render('cart/index');
+  console.log(carts);
+  
+  res.render('cart/index', {
+    carts: carts
+  });
 }
 
 module.exports.addToCart = function(req, res) {
