@@ -21,6 +21,11 @@ module.exports.index = function(req, res) {
   });
 }
 
+module.exports.post = function(req, res) {
+  var sessionId = req.signedCookies.sessionId;
+  var 
+}
+
 module.exports.addToCart = function(req, res) {
   var idBook = req.params.bookId;
   var sessionId = req.signedCookies.sessionId;
