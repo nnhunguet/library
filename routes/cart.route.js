@@ -8,4 +8,6 @@ router.get('/add/:bookId', controller.addToCart);
 
 router.get('/', middlewareAuth.requireAuth, controller.index);
 
+router.post('/', controller.post);
+
 module.exports = router;
