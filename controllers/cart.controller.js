@@ -11,4 +11,4 @@ module.exports.addToCart = function(req, res) {
   .write();
   
   console.log(db.get('sessions').value());
-  res.redirect('/book');}
+  res.redirect('/book')}
